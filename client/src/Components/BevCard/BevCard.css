@@ -1,0 +1,14 @@
+html, body {
+    height: 100%; 
+    display: block; 
+}
+
+img {
+    height: 200px; 
+    width: 200px; 
+}
+
+.bev-card {
+    float: left; 
+}
+

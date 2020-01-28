@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1, 
+        "name": "Americano",
+        "image": "https://media.giphy.com/media/Mpgt8pozJ6J2g/source.gif", 
+        "type": "hot", 
+        "description": "Espresso shot and hot water.",
+        "basePrice": 1.00
+        
+    }, 
+    {
+        "id": 2, 
+        "name": "Cappuccino",
+        "image": "https://media.giphy.com/media/7834rGzOh4KfS/source.gif", 
+        "type": "hot", 
+        "description": "Espresso topped with stiff foam and a splash of hot milk.",
+        "basePrice": 2.00
+        
+    }, 
+    {
+        "id": 3, 
+        "name": "Cold Brew",
+        "image": "https://media.giphy.com/media/kULAIZIJjLUV9eAwPD/source.gif", 
+        "type": "cold", 
+        "description": "Slow filtered cold brewed coffee",
+        "basePrice": 3.00
+        
+    }, 
+    {
+        "id": 4, 
+        "name": "Flat White",
+        "image": "https://media.giphy.com/media/kULAIZIJjLUV9eAwPD/source.gif", 
+        "type": "cold", 
+        "description": "Iced Coffee whisked with cream",
+        "basePrice": 4.00
+        
+    }
+    
+]

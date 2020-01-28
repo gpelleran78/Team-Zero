@@ -1,15 +1,25 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar"; 
-import Wrapper from "./components/Wrapper/Wrapper"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home"; 
+import Order from "./components/Order/Order"; 
+import Events from "./components/Events/Events"; 
+import Listen from "./components/Listen/Listen"
+
 
 
 class App extends Component {
   render() {
     return (
-      <Wrapper>
-        <NavBar></NavBar>
-      </Wrapper>
+      <Router>
+        <NavBar />
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/order" component={Order}></Route>
+        <Route path="/events" component={Events}></Route>
+        <Route path="/listen" component={Listen}></Route>
+      </Router> 
     );
   }
 }

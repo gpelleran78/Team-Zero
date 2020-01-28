@@ -1,10 +1,11 @@
 import React from "react"; 
 import "./Wrapper.css"; 
 
-const Wrapper = () => {
+
+const Wrapper = (props) => {
     return (
         <div className="wrapper">
-            <h1>This is the wrapper component.</h1>
+            {props.children}
         </div>
     ); 
 }
