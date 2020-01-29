@@ -6,9 +6,26 @@ html, body {
 img {
     height: 200px; 
     width: 200px; 
+    border-radius: 40%; 
 }
 
-.bev-card {
-    float: left; 
+
+/* Content within the Cofee Card  */
+.coffee-type {
+    font-family: 'Pavanam', sans-serif;
 }
+.coffee-description {
+    font-family: 'Pavanam', sans-serif;
+}
+.coffee-price {
+    font-family: 'Pavanam', sans-serif;
+}
+.coffee-order-btn {
+    font-family: 'Pavanam', sans-serif;
+}
+
+
+
+
+
 
