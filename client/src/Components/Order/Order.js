@@ -1,6 +1,6 @@
 import React from "react"; 
 import "./Order.css"; 
-import BevList from "../../Components/BevList/BevList"; 
+import BevList from "../../components/BevList/BevList"; 
 
 const Order = () => {
     return (
