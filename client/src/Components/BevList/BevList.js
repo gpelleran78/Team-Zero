@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./BevList.css";
-import BevCard from "../../Components/BevCard/BevCard";
+import BevCard from "../BevCard/BevCard";
 import drinks from "../../drinks.json";
-import Wrapper from "../../Components/Wrapper/Wrapper";
+import Wrapper from "../Wrapper/Wrapper";
 
 class BevList extends Component {
     state = {

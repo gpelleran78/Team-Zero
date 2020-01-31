@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Routing (API & view )
+// Routing (API & view)
 app.use(routes);
 
 // Send every other request to the React app
@@ -23,7 +23,7 @@ app.get("*", (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(`🌎 ==> Listening on port ${PORT}!`);
 });
 
 /*
