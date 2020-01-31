@@ -6,7 +6,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
     return (
-        <div className="navbar" class="sticky-top">
+        <div className="navbar" className="sticky-top">
             <Navbar bg="white" expand="lg">
                 <Navbar.Brand class="nav-header">Roadrunner Coffee House</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

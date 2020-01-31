@@ -3,7 +3,7 @@ import "./Home.css";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Home = () => {
     return (
