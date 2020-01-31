@@ -1,3 +1,19 @@
 .hello-header {
     margin-top: 0px; 
+    border: 1px solid rgb(221, 221, 221); 
+
+}
+
+.home-header-text{
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    font-size: 25px; 
+    font-family: 'Pavanam', sans-serif;
+}
+
+.welcome-header-text{
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    font-size: 25px; 
+    font-family: 'Pavanam', sans-serif;
 }

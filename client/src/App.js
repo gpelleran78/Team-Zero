@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home"; 
-import Order from "./components/Order/Order"; 
-import Events from "./components/Events/Events"; 
-import Listen from "./components/Listen/Listen"; 
-import Login from "./components/Login/Login"; 
+
+import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Components/Home/Home"; 
+import Order from "./Components/Order/Order"; 
+import Events from "./Components/Events/Events"; 
+import Listen from "./Components/Listen/Listen"
+
 
 
 

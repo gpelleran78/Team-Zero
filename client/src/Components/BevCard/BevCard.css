@@ -4,15 +4,24 @@ html, body {
 }
 
 img {
-    height: 200px; 
-    width: 200px; 
-    border-radius: 40%; 
+    height: 150px; 
+    width: 150px; 
+    border-radius: 50%; 
+    margin-top: 10px; 
 }
 
 
 /* Content within the Cofee Card  */
+.coffee-name{
+    margin-bottom: 0px; 
+}
+
 .coffee-type {
     font-family: 'Pavanam', sans-serif;
+    margin-top: 0px; 
+   margin-bottom: 5px; 
+   font-style: italic;
+   font-size: 12px; 
 }
 .coffee-description {
     font-family: 'Pavanam', sans-serif;
