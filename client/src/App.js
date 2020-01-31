@@ -21,7 +21,7 @@ class App extends Component {
         <Route path="/order" component={Order}></Route>
         <Route path="/events" component={Events}></Route>
         <Route path="/listen" component={Listen}></Route>
-        <Route path="/login" component={Login}></Route>
+        {/* <Route path="/login" component={Login}></Route> */}
       </Router> 
     );
   }
