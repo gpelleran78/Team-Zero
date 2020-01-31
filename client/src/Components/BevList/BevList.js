@@ -10,7 +10,12 @@ class BevList extends Component {
     }
 
     addToCart = id => {
-        console.log(`item id: ${id} added to cart`);
+        var cart = [];
+       // var cartItem = this.state.drinks.filter(drink => drink.id === id);
+       cart.push(id); 
+       console.log(cart); 
+        
+
     }
 
     render() {
@@ -20,11 +25,13 @@ class BevList extends Component {
                     this.state.drinks.map(drink => (
                         <BevCard
                             key={drink.id}
+                            id={drink.id}
                             image={drink.image}
                             name={drink.name}
                             description={drink.description}
                             price={drink.basePrice}
                             type={drink.type}
+                            addToCart={this.addToCart}
                         />
                     ))
                 }

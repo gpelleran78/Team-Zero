@@ -2,36 +2,71 @@
     {
         "id": 1, 
         "name": "Americano",
-        "image": "https://media.giphy.com/media/Mpgt8pozJ6J2g/source.gif", 
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
         "type": "hot", 
         "description": "Espresso shot and hot water.",
-        "basePrice": 1.00
+        "basePrice": 3.00
         
     }, 
     {
         "id": 2, 
         "name": "Cappuccino",
-        "image": "https://media.giphy.com/media/7834rGzOh4KfS/source.gif", 
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
         "type": "hot", 
         "description": "Espresso topped with stiff foam and a splash of hot milk.",
-        "basePrice": 2.00
+        "basePrice": 3.00
         
     }, 
     {
         "id": 3, 
-        "name": "Cold Brew",
-        "image": "https://media.giphy.com/media/kULAIZIJjLUV9eAwPD/source.gif", 
-        "type": "cold", 
-        "description": "Slow filtered cold brewed coffee",
+        "name": "Cafe Latte",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "hot", 
+        "description": "Espresso with hot milk topped with foam",
         "basePrice": 3.00
         
     }, 
     {
         "id": 4, 
+        "name": "Espresso",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "hot", 
+        "description": "Espresso, straight up.",
+        "basePrice": 3.00
+        
+    }, 
+    {
+        "id": 5, 
         "name": "Flat White",
-        "image": "https://media.giphy.com/media/kULAIZIJjLUV9eAwPD/source.gif", 
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "hot", 
+        "description": "Flat White Cream Coffee",
+        "basePrice": 3.00
+    }, 
+    {
+        "id": 6, 
+        "name": "Iced Americano",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
         "type": "cold", 
-        "description": "Iced Coffee whisked with cream",
+        "description": "Espresso over ice.",
+        "basePrice": 4.00
+        
+    }, 
+    {
+        "id": 7, 
+        "name": "Iced Mocha",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "cold", 
+        "description": "Espresso blended with chocolate and cream over ice.",
+        "basePrice": 4.00
+        
+    },
+    {
+        "id": 8, 
+        "name": "Iced Cafe Latte",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "cold", 
+        "description": "Espresso and milk over ice.",
         "basePrice": 4.00
         
     }

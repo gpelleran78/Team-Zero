@@ -16,7 +16,7 @@ const BevCard = (props) => {
                     <p class="coffee-description">{props.description}</p>
                     <p class="coffee-price">Price: ${props.price}.00 </p>
                     </Card.Text>
-                    <Button class="coffee-order-btn" variant="danger">Add to Cart</Button>
+                    <Button class="coffee-order-btn" variant="danger" onClick={()=> props.addToCart(props.id)}>Add to Cart</Button>
                 </Card.Body>
             </Card>
         </div>
