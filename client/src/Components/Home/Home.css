@@ -1,19 +1,40 @@
-.hello-header {
-    margin-top: 0px; 
-    border: 1px solid rgb(221, 221, 221); 
+.cards {
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+}
 
+.hello-header { 
+    margin-right: 10px; 
+    margin-left: 10px; 
 }
 
 .home-header-text{
     margin-top: 20px; 
     margin-bottom: 10px; 
     font-size: 25px; 
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 .welcome-header-text{
     margin-top: 5px; 
     margin-bottom: 10px; 
     font-size: 25px; 
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.imageOverLay{
+    width: 100%; 
+    max-height: 350px; 
+    border-radius: 5px;
+}
+
+.smallImgText{
+    position: absolute; 
+    top: 80px; 
+    right:100px; 
+    width: 100%; 
+    color: white; 
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px; 
 }
