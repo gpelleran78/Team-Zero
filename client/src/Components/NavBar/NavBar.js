@@ -19,13 +19,13 @@ const NavBar = () => {
                         <Nav.Link><Link to="/listen">My Sounds</Link></Nav.Link>
                         <Nav.Link><Link to="/Order">Order</Link></Nav.Link>
                         <NavDropdown title="Menu" id="basic-nav-dropdown">
-                            <NavDropdown.Item>Hot Cofees</NavDropdown.Item>
-                            <NavDropdown.Item>Iced Cofees</NavDropdown.Item>
+                            <NavDropdown.Item>Hot Coffee</NavDropdown.Item>
+                            <NavDropdown.Item>Iced Coffee</NavDropdown.Item>
                             <NavDropdown.Item>Yum Yum Bakery</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item>Merchandies</NavDropdown.Item>
+                            <NavDropdown.Item>Merchandise</NavDropdown.Item>
                         </NavDropdown>
-                        
+                        <Nav.Link><Link to="/login">Log-In/Create Account</Link></Nav.Link>
                     </Nav>
 
                 </Navbar.Collapse>
