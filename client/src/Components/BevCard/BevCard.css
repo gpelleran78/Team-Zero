@@ -14,23 +14,29 @@ html, body {
 /* Content within the Cofee Card  */
 .coffee-name{
     margin-bottom: 0px; 
+    font-size: 35px; 
 }
 
 .coffee-type {
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
     margin-top: 0px; 
    margin-bottom: 5px; 
    font-style: italic;
    font-size: 12px; 
 }
+
 .coffee-description {
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px; 
 }
+
 .coffee-price {
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-size: 10px; 
 }
+
 .coffee-order-btn {
-    font-family: 'Pavanam', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 
