@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./BevList.css";
-import BevCard from "../../components/BevCard/BevCard";
+import BevCard from "../../Components/BevCard/BevCard";
 import drinks from "../../drinks.json";
-import Wrapper from "../../components/Wrapper/Wrapper";
+import Wrapper from "../../Components/Wrapper/Wrapper";
 
 class BevList extends Component {
     state = {
@@ -10,7 +10,12 @@ class BevList extends Component {
     }
 
     addToCart = id => {
-        console.log(`item id: ${id} added to cart`);
+        var cart = [];
+       // var cartItem = this.state.drinks.filter(drink => drink.id === id);
+       cart.push(id); 
+       console.log(cart); 
+        
+
     }
 
     render() {
@@ -20,11 +25,13 @@ class BevList extends Component {
                     this.state.drinks.map(drink => (
                         <BevCard
                             key={drink.id}
+                            id={drink.id}
                             image={drink.image}
                             name={drink.name}
                             description={drink.description}
                             price={drink.basePrice}
                             type={drink.type}
+                            addToCart={this.addToCart}
                         />
                     ))
                 }
