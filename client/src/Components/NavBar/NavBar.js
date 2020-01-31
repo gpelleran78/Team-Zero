@@ -16,6 +16,7 @@ const NavBar = () => {
                         <Nav.Link><Link to="/events">Upcoming Events</Link></Nav.Link>
                         <Nav.Link><Link to="/listen">My Sounds</Link></Nav.Link>
                         <Nav.Link><Link to="/Order">Order</Link></Nav.Link>
+
                     </Nav>
 
                 </Navbar.Collapse>
