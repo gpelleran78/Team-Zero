@@ -6,10 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home"; 
 import Order from "./Components/Order/Order"; 
+import Listen from "./Components/Listen/Listen"; 
 import Events from "./Components/Events/Events"; 
-import Listen from "./Components/Listen/Listen"
-
-
 
 
 class App extends Component {
