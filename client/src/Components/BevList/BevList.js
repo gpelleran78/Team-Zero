@@ -1,9 +1,40 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./BevList.css";
 import BevCard from "../BevCard/BevCard";
 import drinks from "../../drinks.json";
 import Wrapper from "../Wrapper/Wrapper";
 
+function BevList() {
+    const [cart, setCart] = useState([]);
+
+    
+
+    useEffect(() => {
+
+    })
+
+    return (
+        <Wrapper>
+            {
+                drinks.map(drink => (
+                    <BevCard
+                        key={drink.id}
+                        id={drink.id}
+                        image={drink.image}
+                        name={drink.name}
+                        description={drink.description}
+                        price={drink.basePrice}
+                        type={drink.type}
+                    />
+                ))
+            }
+        </Wrapper>
+    )
+}
+
+export default BevList;
+
+/*
 class BevList extends Component {
     state = {
         drinks
@@ -12,10 +43,8 @@ class BevList extends Component {
     addToCart = id => {
         var cart = [];
        // var cartItem = this.state.drinks.filter(drink => drink.id === id);
-       cart.push(id); 
-       console.log(cart); 
-        
-
+       cart.push(id);
+       console.log(cart);
     }
 
     render() {
@@ -40,4 +69,6 @@ class BevList extends Component {
     }
 }
 
-export default BevList; 
+export default BevList;
+
+*/
