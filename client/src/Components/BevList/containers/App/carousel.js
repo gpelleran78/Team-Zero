@@ -7,7 +7,7 @@ display: flex;
 justify-content: center;
 `;
 
-export default function App(props) {
+export default function Carousel(props) {
     // console.log("index/app", props )
     return (
         <AppWrapper>

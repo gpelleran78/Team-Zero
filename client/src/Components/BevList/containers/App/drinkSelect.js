@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DrinkForm from "./drinkForm";
-import MyCarousel from "./index";
+import Carousel from "./carousel";
 import DrinkList from './drinkList'
 
 class DrinkSelect extends Component {
@@ -101,7 +101,7 @@ class DrinkSelect extends Component {
     //console.log(`I am ${this.bigness} renders old`)
     return (
       <div>
-        <MyCarousel
+        <Carousel
           state={this.state}
           handleInputChange={this.handleInputChange}
         />
