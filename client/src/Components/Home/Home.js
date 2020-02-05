@@ -12,7 +12,7 @@ const Home = () => {
             {/* Top Header Card */}
             <Card className="cards shadow">
                 <Card.Body>
-                    <Image src="https://files.slack.com/files-pri/TLX4RPHDM-FT1UGUSBS/roadrunnercoffee.jpg" />
+                    <Image src="../" />
                     <Card.Title class="welcome-header-text"> Welcome to Roadrunner Coffee</Card.Title>
                 </Card.Body>
             </Card>
@@ -20,7 +20,7 @@ const Home = () => {
             {/* sustainability Card */}
             <Card className="shadow">
                 <Image className="imageOverLay" src="https://i.ytimg.com/vi/ZHv6wAbl1wE/maxresdefault.jpg" />
-                <p class="smallImgText">sustainably <br />  sourced coffee</p>
+                <p class="smallImgText">sustainably <br /> sourced coffee</p>
                 <Card.Text className="sustinabilitySmallText">
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.

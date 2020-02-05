@@ -18,7 +18,6 @@ const NavBar = () => {
                         <Nav.Link><Link to="/Order">Order</Link></Nav.Link>
 
                     </Nav>
-
                 </Navbar.Collapse>
             </Navbar>
         </div>
