@@ -1,0 +1,13 @@
+[
+    {
+        "id": 3, 
+        "name": "Cafe Latte",
+        "image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-938993594.jpg", 
+        "type": "hot", 
+        "description": "Espresso with hot milk topped with foam",
+        "basePrice": 3.00, 
+        "quantity": 0, 
+        "requestMods": null
+        
+    }
+]

@@ -1,11 +1,12 @@
-import React from "react"; 
+import React, { Component } from "react"; 
 import "./Order.css"; 
 
 // import BevList from "../../Components/BevList/BevList"; 
 import DrinkSelect from '../BevList/containers/App/drinkSelect'
 
+class Order extends Component {
 
-const Order = (props) => {
+  render() {
     return (
         <div className="order-component">
 
@@ -13,8 +14,9 @@ const Order = (props) => {
            <DrinkSelect/>
 
         </div>
-       
+
     )
+  }
 }
 
-export default Order; 
+export default Order;
