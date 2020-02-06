@@ -31,10 +31,34 @@
 
 .smallImgText{
     position: absolute; 
-    top: 80px; 
-    right:100px; 
+    top: 70px; 
+    right: 90px; 
     width: 100%; 
     color: white; 
     font-family: 'Comfortaa', cursive;
     font-size: 20px; 
+}
+
+.sustinabilitySmallText{
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px; 
+    padding-top: 15px;  
+    padding-bottom: 10px;  
+    padding-right: 15px;  
+    padding-left: 15px;  
+}
+
+.eventPeopleImg{
+    max-width: 100%;
+    padding: 0px; 
+}
+
+
+.explore-btns {
+    margin-bottom: 20px; 
+}
+
+.footerCard {
+  font-size: 10px; 
+  color: rgb(177, 177, 177); 
 }
