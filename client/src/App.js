@@ -15,7 +15,6 @@ function App() {
           <Routes />
         </Wrapper>
       </Router>
-  )
 }
 
 export default App;
