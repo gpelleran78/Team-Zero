@@ -1,26 +1,30 @@
 import React, { Component } from "react";
 import "./Order.css";
-import BevList from "../BevList/BevList";
-import Button from "react-bootstrap/Button";
+import BevCard from "../BevCard/BevCard";
+import drinks from "../../drinks.json";
 
 class Order extends Component {
-  state = {
-    
-  };
 
-  cartReview = () => {
-      console.log("Cart review function executed")
-  }
-
-  render () {
-      return (
-          <div className="order-component">
-           <BevList></BevList>
-        </div>
-      )
-
+  render() {
+    return (
+      <div className="order-component">
+        {
+          drinks.map(drink => (
+            <BevCard
+              key={drink.id}
+              id={drink.id}
+              image={drink.image}
+              name={drink.name}
+              description={drink.description}
+              price={drink.basePrice}
+              type={drink.type}
+              
+            />
+          ))
+        }
+      </div>
+    )
   }
 }
-
 
 export default Order;
