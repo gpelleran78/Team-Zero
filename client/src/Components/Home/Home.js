@@ -2,6 +2,11 @@ import React from "react";
 import "./Home.css";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import SustainableCard from "../SustainableCard/SustainableCard";
+// import FindCoffeeCard from "../FindCoffeeCard/FindCoffeeCard";
+
 import Button from "react-bootstrap/Button";
 
 
