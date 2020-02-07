@@ -29,6 +29,7 @@ console.log(props)
         ) : (
             <h6>empty cart</h6>
             )}
+            <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
             </div>
                     )
                 }
