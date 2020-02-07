@@ -169,8 +169,8 @@ const drinkForm = (props) => {
     <p>Notes</p>
     <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
     <br />
-    <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
-    <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
+    <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
+    
   </form>
   ):props.state.drinktype === "Cappucino"?(
     <form action="">
@@ -324,8 +324,8 @@ const drinkForm = (props) => {
           <p>Notes</p>
           <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
           <br />
-          <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
-          <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
+          <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
+          
         </form>
   ):props.state.drinktype === "Mocha"?(
     <form action="">
@@ -489,8 +489,8 @@ const drinkForm = (props) => {
           <p>Notes</p>
           <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
           <br />
-          <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
-          <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
+          <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
+          
         </form>
   ):props.state.drinktype === "Frappe"?(
     <form action="">
@@ -629,8 +629,8 @@ const drinkForm = (props) => {
           <p>Notes</p>
           <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
           <br />
-          <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
-          <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
+          <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
+          
         </form>
   ):<h1>Choose a Drink</h1>
   }
@@ -795,8 +795,8 @@ const drinkForm = (props) => {
           <p>Notes</p>
           <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
           <br />
-          <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
-          <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
+          <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
+          
         </form> */}
       </div>
     )

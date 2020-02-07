@@ -141,7 +141,8 @@ class DrinkSelect extends Component {
         ) : (
           <h6>empty cart</h6>
         )} */}
-        <DrinkList handler={this.deleteDrink} arr={this.drinklist} listFlavors={this.listFlavors}/>
+        <DrinkList handler={this.deleteDrink} arr={this.drinklist} listFlavors={this.listFlavors}
+        submitOrder={this.submitOrder}/>
       </div>
     );
   }
