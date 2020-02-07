@@ -17,13 +17,13 @@ function App() {
 
   return (
     <Router>
-      <Wrapper>
-        <NavBar />
-        <Routes />
-      </Wrapper>
-    </Router>
-
+        <Wrapper>
+          <NavBar />
+          <Routes />
+        </Wrapper>
+      </Router>
   )
 };
+
 
 export default App;
