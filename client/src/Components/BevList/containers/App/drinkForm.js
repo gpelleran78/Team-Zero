@@ -169,9 +169,11 @@ const drinkForm = (props) => {
     <p>Notes</p>
     <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
     <br />
+
     <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink}/>
     
   </form>
+
   ):props.state.drinktype === "Cappucino"?(
     <form action="">
           <p>Hot or Cold?</p>
@@ -329,7 +331,7 @@ const drinkForm = (props) => {
         </form>
   ):props.state.drinktype === "Mocha"?(
     <form action="">
-          <p>Hot or Cold?</p>
+          <p><b>Hot or Cold?</b></p>
           <input
             type="radio"
             name="temp"

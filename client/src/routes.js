@@ -7,9 +7,11 @@ import Listen from "./Components/Listen/Listen";
 import Login from "./Components/Login/Login";
 import Cart from "./Components/Cart/Cart"; 
 import EventPage from "./Components/EventPage/EventPage";
-import FindUs from "./Components/FindUs/FindUs"; 
+
 import About from "./Components/About/About"; 
 import Contact from "./Components/Contact/Contact"; 
+import FindUs from "./Components/FindUs/FindUs"; 
+
 
 function Routes() {
     
@@ -21,9 +23,9 @@ function Routes() {
             <Route path="/listen" component={Listen} />
             <Route path="/login" component={Login} />
             <Route path="/cart" component={Cart} />
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
         </Switch>
     )
 }
