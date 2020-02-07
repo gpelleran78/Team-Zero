@@ -171,7 +171,7 @@ const drinkForm = (props) => {
     <br />
     <input type="submit" value="Add New Drink" onClick={props.handleNewDrink}/>
     <input type="submit" value="Submit Order" onClick={props.submitOrder}/>
-  </form>
+  </form> //mocha, white mocha, latte, cappuccino, americano
   ):props.state.drinktype === "Cappucino"?(
     <form action="">
           <p>Hot or Cold?</p>
@@ -329,7 +329,7 @@ const drinkForm = (props) => {
         </form>
   ):props.state.drinktype === "Mocha"?(
     <form action="">
-          <p>Hot or Cold?</p>
+          <p><b>Hot or Cold?</b></p>
           <input
             type="radio"
             name="temp"

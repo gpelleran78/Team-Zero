@@ -19,6 +19,7 @@ function NavBar(props) {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
                         <Link to="/events">Upcoming Events</Link>
                         <Link to="/listen">My Sounds</Link>
                         <Link to="/Order">Order</Link>
