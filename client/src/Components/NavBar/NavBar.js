@@ -21,7 +21,7 @@ function NavBar(props) {
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
                         <Link to="/events">Upcoming Events</Link>
-                        <Link to="/listen">My Sounds</Link>
+                        <Link to="/listen">Listen</Link>
                         <Link to="/order">Order</Link>
                         <Link to="/login">Login</Link>
                     </Nav>

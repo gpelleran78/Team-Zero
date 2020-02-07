@@ -1,9 +1,8 @@
 import React from "react"; 
-import "./Listen.css"; 
 
 const Listen = () => {
     return(
-        <h2>This is the Listen Component</h2>
+        <h2>This is the Listen Component/page</h2>
     )
 }
 
