@@ -17,6 +17,7 @@ function Routes() {
     
     return (
         <Switch>
+
             <Route exact path="/" component={Home} />
             <Route path="/order" component={Order} />
             <Route path="/events" component={EventPage} />
@@ -26,6 +27,7 @@ function Routes() {
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>
+      
         </Switch>
     )
 }

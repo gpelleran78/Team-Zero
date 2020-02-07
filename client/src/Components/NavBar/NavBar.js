@@ -22,7 +22,8 @@ function NavBar(props) {
                         <Link to="/about">About</Link>
                         <Link to="/events">Upcoming Events</Link>
                         <Link to="/listen">My Sounds</Link>
-                        <Link to="/Order">Order</Link>
+                        <Link to="/order">Order</Link>
+                        <Link to="/login">Login</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
