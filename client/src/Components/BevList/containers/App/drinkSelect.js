@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import DrinkForm from "./drinkForm";
 import Carousel from "./carousel";
 import DrinkList from './drinkList'
+import CartContext from "../../../../utils/CartContext";
 
 class DrinkSelect extends Component {
   state = {
@@ -53,7 +54,11 @@ class DrinkSelect extends Component {
       notes: this.state.notes
     };
 
-    this.drinklist.push(drink);
+   this.props.pushToCart(drink); 
+
+
+    
+    //setCartItem
     // console.log("drink LIST HERE", this.drinklist);
     // console.log("drink HERE", this.drinklist[0]);
     this.setState({

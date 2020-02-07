@@ -12,11 +12,8 @@ function Wrapper(props) {
 
     useEffect(() => {
         if (cartItem) {
-            const item = drinks.filter(function (drink) {
-                return drink.id === cartItem.id;
-            });
-            console.log(`item to add ${item}`)
-            setCartArr([...cartArr, item[0]]);
+            
+            setCartArr([...cartArr, cartItem]);
         }
 
 

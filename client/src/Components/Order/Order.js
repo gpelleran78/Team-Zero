@@ -1,22 +1,26 @@
-import React, { Component } from "react"; 
+import React, { useContext } from "react"; 
 import "./Order.css"; 
-
+import CartContext from "../../utils/CartContext"; 
 // import BevList from "../../Components/BevList/BevList"; 
 import DrinkSelect from '../BevList/containers/App/drinkSelect'
 
-class Order extends Component {
+function Order(props) {
 
-  render() {
-    return (
+  const { setCartItem, cartCount, setCartCount } = useContext(CartContext); 
+
+  function pushToCart(item) {
+    console.log('item added to cart');
+    console.log(item);  
+    setCartItem(item);
+    setCartCount(cartCount + 1); 
+  }
+   return (
         <div className="order-component">
-
            {/* <BevList></BevList> */}
-           <DrinkSelect/>
-
+           <DrinkSelect pushToCart={pushToCart}/>
         </div>
 
     )
-  }
 }
 
 export default Order;

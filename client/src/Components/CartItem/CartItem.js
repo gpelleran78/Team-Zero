@@ -7,13 +7,11 @@ function CartItem(props) {
     return(
         <div className="cart-item">
             <h1>
-            item: {props.name}
-            <br/>
-            {props.description}
-            <br/>
-            ${props.basePrice}.00
+            item: {props.itemName}
+            size: {props.size}
+            quantity: {props.itemQuantity}
+            flavors: [vanilla: {props.itemVanilla}], [hazlenut: {props.itemHazlenut}], [mocha: {props.mocha}], [white mocha: {props.whiteMocha}]
             </h1>
-            
         </div>
     )
 }

@@ -8,18 +8,26 @@ function Cart() {
 
     const { cartArr } = useContext(CartContext);
 
+  
+
     return (
         <div className="cart-wrapper">
             {
                 cartArr.map(item => (
                     <CartItem
                         key={item.id}
-                        id={item.id}
-                        name={item.name}
-                        type={item.type}
-                        basePrice={item.basePrice}
-                        description={item.description}
-                        image={item.image}
+                        itemName={item.drinktype}
+                        itemSize={item.size}
+                        itemExtraShots={item.extraShots}
+                        itemMilk={item.milk}
+                        itemVanilla={item.vanilla}
+                        itemHazlenut={item.hanzlenut}
+                        itemMocha={item.mocha}
+                        itemWhiteMocha={item.whiteMocha}
+                        itemSFVanilla={item.SFVanilla}
+                        itemNotes={item.notes}
+                        itemQuantity={item.amountofdrinks}
+                        
                     />
                 ))
             }
