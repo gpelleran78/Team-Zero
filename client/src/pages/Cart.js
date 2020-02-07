@@ -1,14 +1,12 @@
 import React, { useContext } from 'react';
-import "./Cart.css";
-import CartItem from "../CartItem/CartItem";
-import CheckoutBtn from "../CheckoutBtn/CheckoutBtn";
-import CartContext from "../../utils/CartContext";
+import CartItem from "../Components/CartItem/CartItem";
+import CheckoutBtn from "../Components/CheckoutBtn/CheckoutBtn";
+import CartContext from "../utils/CartContext";
+
 
 function Cart() {
 
     const { cartArr } = useContext(CartContext);
-
-  
 
     return (
         <div className="cart-wrapper">

@@ -1,8 +1,8 @@
 import React, { useContext } from "react"; 
-import "./Order.css"; 
-import CartContext from "../../utils/CartContext"; 
+import CartContext from "../utils/CartContext"; 
 // import BevList from "../../Components/BevList/BevList"; 
-import DrinkSelect from '../BevList/containers/App/drinkSelect'
+// import DrinkSelect from '../BevList/containers/App/drinkSelect'; 
+import DrinkSelect from "../Components/BevList/containers/App/drinkSelect";
 
 function Order(props) {
 
@@ -23,4 +23,4 @@ function Order(props) {
     )
 }
 
-export default Order;
+export default Order; 

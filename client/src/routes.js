@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./Components/Home/Home";
-import Order from "./Components/Order/Order";
-import Listen from "./Components/Listen/Listen";
+import Home from "./pages/Home";
+import Order from "./pages/Order";
+import Events from "./pages/Events"; 
+import Listen from "./pages/Listen"; 
+import Cart from "./pages/Cart"; 
 import Login from "./Components/Login/Login";
-import Cart from "./Components/Cart/Cart"; 
-import EventPage from "./Components/EventPage/EventPage";
+
 
 import About from "./Components/About/About"; 
 import Contact from "./Components/Contact/Contact"; 
@@ -18,17 +19,15 @@ function Routes() {
     
     return (
         <Switch>
-
             <Route exact path="/" component={Home} />
             <PrivateRoute path="/order" component={Order} />
-            <PrivateRoute path="/events" component={EventPage} />
+            <PrivateRoute path="/events" component={Events} />
             <PrivateRoute path="/listen" component={Listen} />
             <Route path="/login" component={Login} />
             <PrivateRoute path="/cart" component={Cart} />
-            <PrivateRoute path="/about" component={About}/>
-            <PrivateRoute path="/contact" component={Contact}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>
-      
         </Switch>
     )
 }
