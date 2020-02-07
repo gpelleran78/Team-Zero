@@ -4,10 +4,6 @@ import "./CartItem.css";
 
 function CartItem(props) {
     
-    
-
-   
-    
     return(
         <div className="cart-item">
             <h1>

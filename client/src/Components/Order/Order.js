@@ -6,12 +6,13 @@ import DrinkSelect from '../BevList/containers/App/drinkSelect'
 
 function Order(props) {
 
-  const { setCartItem } = useContext(CartContext); 
+  const { setCartItem, cartCount, setCartCount } = useContext(CartContext); 
 
   function pushToCart(item) {
     console.log('item added to cart');
     console.log(item);  
-    setCartItem(item); 
+    setCartItem(item);
+    setCartCount(cartCount + 1); 
   }
    return (
         <div className="order-component">
