@@ -11,6 +11,7 @@ import EventPage from "./Components/EventPage/EventPage";
 import About from "./Components/About/About"; 
 import Contact from "./Components/Contact/Contact"; 
 import FindUs from "./Components/FindUs/FindUs"; 
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 
 function Routes() {
@@ -19,13 +20,13 @@ function Routes() {
         <Switch>
 
             <Route exact path="/" component={Home} />
-            <Route path="/order" component={Order} />
-            <Route path="/events" component={EventPage} />
-            <Route path="/listen" component={Listen} />
+            <PrivateRoute path="/order" component={Order} />
+            <PrivateRoute path="/events" component={EventPage} />
+            <PrivateRoute path="/listen" component={Listen} />
             <Route path="/login" component={Login} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
+            <PrivateRoute path="/cart" component={Cart} />
+            <PrivateRoute path="/about" component={About}/>
+            <PrivateRoute path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>
       
         </Switch>
