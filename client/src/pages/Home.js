@@ -13,7 +13,6 @@ const Home = () => {
         {/* Top Header Card */}
         <Card className="cards shadow">
             <Card.Body>
-
                 <Image src="https://files.slack.com/files-pri/TLX4RPHDM-FT1UGUSBS/roadrunnercoffee.jpg" />
                 <Card.Title className="welcome-header-text">Welcome to Roadrunner Coffee</Card.Title> 
              

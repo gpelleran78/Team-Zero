@@ -8,16 +8,18 @@ import CartContext from "../../utils/CartContext";
 import { useAuth0 } from "../../react-auth0-spa";
 
 function NavBar(props) {
-
+  
     const { cartCount } = useContext(CartContext);
     let history = useHistory();
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     return (
         <div className="sticky-top navbar">
             <Navbar bg="white" expand="lg">
-                <Navbar.Brand className="nav-header">Roadrunner Coffee House</Navbar.Brand>
-                <Button onClick={() => history.push("/cart")}>Cart({cartCount})</Button>
+                <Navbar.Brand>Roadrunner Coffee House</Navbar.Brand>
+                <Button className="cartBTN" onClick={() => history.push("/cart")}>Cart({cartCount})</Button>
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link to="/">Home</Link>
@@ -31,6 +33,7 @@ function NavBar(props) {
                         {!isAuthenticated && <Button onClick={() => loginWithRedirect()}>Log In</Button>}
                     </Nav>
                 </Navbar.Collapse>
+                
             </Navbar>
         </div>
 
