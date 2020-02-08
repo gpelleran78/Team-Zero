@@ -1,0 +1,15 @@
+
+/* This is the coffee image itself */
+.coffee-img{
+    border: 2px solid #e3b098; 
+    align-content: center; 
+    margin: 5px; 
+}
+
+/* This is the coffee button under the image  */
+.coffee-btn{
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    margin-top: 20px; 
+    color: #3a1707; 
+}

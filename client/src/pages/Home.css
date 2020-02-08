@@ -10,12 +10,12 @@
     right: 90px; 
     width: 100%; 
     color: white; 
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Oxygen', sans-serif;
     font-size: 20px; 
 }
 
 .sustinabilitySmallText{
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Oxygen', sans-serif;
     font-size: 15px; 
     padding-top: 15px;  
     padding-bottom: 10px;  
@@ -28,9 +28,12 @@
     padding: 0px; 
 }
 
-
 .explore-btns {
     margin-bottom: 20px; 
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    margin-top: 20px; 
+    color: #3a1707; 
 }
 
 .footerCard {

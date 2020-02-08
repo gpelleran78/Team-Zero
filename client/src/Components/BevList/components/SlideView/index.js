@@ -18,6 +18,7 @@ export default class SlideView extends React.Component {
           slidesToShow: 1,
           slidesToScroll: 1
         };
+        
         return(
             <Wrapper>
                 <Slider

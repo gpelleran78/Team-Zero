@@ -11,11 +11,12 @@ function NavBar(props) {
     const { cartCount } = useContext(CartContext); 
     let history = useHistory(); 
      return (
-        <div className="sticky-top navbar">
+        <div className="sticky-top Top-navbar container-fuild">
             <Navbar bg="white" expand="lg">
-                <Navbar.Brand className="nav-header">Roadrunner Coffee House</Navbar.Brand>
-                <Button onClick={()=>history.push("/cart")}>Cart({ cartCount })</Button>
+                <Navbar.Brand> Roadrunner Coffee House </Navbar.Brand>
+                <Button className="cartBTN" onClick={()=>history.push("/cart")}>Cart({ cartCount })</Button>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link to="/">Home</Link>
@@ -26,6 +27,7 @@ function NavBar(props) {
                         <Link to="/login">Login</Link>
                     </Nav>
                 </Navbar.Collapse>
+                
             </Navbar>
         </div>
 

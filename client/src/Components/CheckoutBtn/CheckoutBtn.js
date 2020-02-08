@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import "./CheckoutBtn.css";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import CartContext from '../../utils/CartContext';
 
 function CheckoutBtn() {
@@ -12,7 +12,7 @@ function CheckoutBtn() {
     };
 
     return (
-        <Button variant="danger" onClick={() => { handleClick() }}>Checkout</Button>
+        <button className="checkout-btn btn" onClick={() => { handleClick() }}>Checkout</button>
     );
 }
 

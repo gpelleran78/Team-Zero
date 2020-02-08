@@ -1,7 +1,13 @@
-.navbar {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    width: 100%;
+.Top-navbar {
+    font-family: 'Oxygen', sans-serif;    width: 100%;
     margin-bottom: 5px; 
-    box-shadow: 0 3px 6px -6px
+    /* box-shadow: 0 3px 6px -6px; */
 }
 
+.cartBTN{
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    margin-top: 20px; 
+    color: #3a1707; 
+    margin: 10px; 
+}
