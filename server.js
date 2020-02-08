@@ -1,13 +1,11 @@
 const express = require("express");
-
 const path = require("path");
-const cors = require('cors'); 
-
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const app = express();
+const cors = require('cors');
 
-const routes = require("./routes"); 
 const db = require("./models");
+
 
 // Middleware Functions 
 app.use(express.urlencoded({ extended: true }));
@@ -58,19 +56,13 @@ app.get("*", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-  console.log(`🌎 ==> Listening on port ${PORT}!`);
-});
 
-/*
-// Starting the server and model sync
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+
+//Starting the server after model sync
+db.sequelize
+  .sync({ force: true })
+  .then(function () {
+    app.listen(PORT, () => {
+      console.log(`🌎 ==> Listening on port ${PORT}!`);
+    });
   });
-});
-*/

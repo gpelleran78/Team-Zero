@@ -7,6 +7,7 @@ import CartContext from "../utils/CartContext";
 function Cart() {
 
     const { cartArr } = useContext(CartContext);
+    // need to update state in this component
 
     return (
         <div className="cart-wrapper">

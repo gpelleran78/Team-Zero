@@ -23,9 +23,16 @@ function Wrapper(props) {
         console.log(cartArr);
     }, [cartArr]);
 
+    useEffect(()=>{
+        if (cartConfirm === true) {
+            console.log("push to database trigger"); 
+            //push to database cartArr, userId, and, timestamp 
+        }
+    }, [cartConfirm])
+
     function handleCartBtn() {
         //reroute to cart review page to edit or continue to process order.
-        console.log("handleCartBtn function executed: process payment goes here"); 
+        console.log("push to database here"); 
     };
 
     return (
