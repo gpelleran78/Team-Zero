@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const DrinkOrder = sequelize.define("DrinkOrder", {
+    const Order = sequelize.define("Order", {
         id: {
             type: DataTypes.INTEGER, 
             autoIncrement: true, 
@@ -16,11 +16,11 @@ module.exports = function(sequelize, DataTypes) {
         }
     }); 
 
-    DrinkOrder.associate = function(models) {
-        DrinkOrder.belongsTo(models.User); 
+    Order.associate = function(models) {
+        Order.belongsTo(models.User); 
     }; 
 
-    return DrinkOrder; 
+    return Order; 
 }
 
 

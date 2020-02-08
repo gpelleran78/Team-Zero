@@ -12,11 +12,6 @@ module.exports = function (sequelize, DataTypes) {
         password: DataTypes.STRING
     });
 
-    User.associate = function (models) {
-        User.hasMany(models.Eventdb);
-        User.hasMany(models.DrinkOrder);
-    };
-
     User.generateHash = function (password) {
         return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
     };

@@ -6,7 +6,7 @@ function Page(props) {
         <div>
 
         <img src={props.source} alt={props.drink}></img>
-        <input type="submit" value={props.drink} name="drinktype" onClick={props.handler} />
+        <input type="submit" value={props.drink} image={props.source} name="drinktype" onClick={props.handler} />
         </div>
     )
 }

@@ -1,11 +1,10 @@
-const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 8080;
-const app = express();
+const express = require('express');
 const cors = require('cors');
+const db = require('./models');
+const path = require('path'); 
 
-const db = require("./models");
-
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Middleware Functions 
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +18,30 @@ app.use(cors({
   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
   'preflightContinue': false
 }));
+
+
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+
+require("./routes/api-routes-drinks")(app); 
+require("./routes/api-routes-drinks")(app); 
+require("./routes/api-routes-users")(app); 
+
+app.use(express.static("client/build")); 
+
+//Starting the server after model sync
+db.sequelize
+  .sync({ force: true })
+  .then(function () {
+    app.listen(PORT, () => {
+      console.log(`🌎 ==> Listening on port ${PORT}!`);
+    });
+  });
+
 
 
 // Add headers
@@ -41,28 +64,14 @@ app.use(cors({
 //       next();
 //   });
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+
+/*
+app.use(express.static(path.join(__dirname, 'client/build'))); 
 
 // Routing (API & view)
 // app.use(routes);
+require("./routes/api-routes-drinks")(app); 
+require("./routes/api-routes-drinks")(app); 
+require("./routes/api-routes-users")(app); 
 
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
-
-
-
-//Starting the server after model sync
-db.sequelize
-  .sync({ force: true })
-  .then(function () {
-    app.listen(PORT, () => {
-      console.log(`🌎 ==> Listening on port ${PORT}!`);
-    });
-  });
+*/
