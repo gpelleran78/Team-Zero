@@ -15,11 +15,13 @@
 import React from "react";
 import {useAuth0} from "../../react-auth0-spa";
 
-const NavBar = () => {
+const Login = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
     <div>
+      this is the login component
+      
       {!isAuthenticated && (
         <button onClick={() => loginWithRedirect({})}>Log in</button>
       )}
@@ -29,4 +31,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Login;

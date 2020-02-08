@@ -7,9 +7,11 @@ import Events from "./pages/Events";
 import Listen from "./pages/Listen"; 
 import Cart from "./pages/Cart"; 
 import Login from "./Components/Login/Login";
+import About from "./pages/About"; 
+import Profile from "./pages/Profile"; 
 
 
-import About from "./Components/About/About"; 
+
 import Contact from "./Components/Contact/Contact"; 
 import FindUs from "./Components/FindUs/FindUs"; 
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -20,6 +22,7 @@ function Routes() {
     return (
         <Switch>
             <Route exact path="/" component={Home} />
+            <PrivateRoute path="/profile/" component={Profile} />
             <PrivateRoute path="/order" component={Order} />
             <PrivateRoute path="/events" component={Events} />
             <PrivateRoute path="/listen" component={Listen} />
