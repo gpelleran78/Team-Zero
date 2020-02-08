@@ -1,7 +1,13 @@
-.Top-navbar {
-    font-family: 'Oxygen', sans-serif;    width: 100%;
+.navbar {
+    font-family: 'Oxygen', sans-serif;
     margin-bottom: 5px; 
-    /* box-shadow: 0 3px 6px -6px; */
+    background-color: #ffe2d4; 
+}
+
+.nav-Header {
+    font-family: 'Oxygen', sans-serif;  
+    font-size: 25px;   
+    color: #ca6316;
 }
 
 .cartBTN{
@@ -10,4 +16,19 @@
     margin-top: 20px; 
     color: #3a1707; 
     margin: 10px; 
+}
+
+.link {
+    color: #ca6316; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.loginANDLoginINBTN {
+    color: #3a1707; 
+    padding-top: 10px; 
+    padding-bottom: 10px;  
+    background-color: #e3b098; 
+    border: 1px solid #3a1707; 
+    margin-top: 2px; 
 }
