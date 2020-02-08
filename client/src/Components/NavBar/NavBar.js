@@ -14,31 +14,28 @@ function NavBar(props) {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
     return (
-        <div className="sticky-top navbar">
-                <Navbar bg="transparent" expand="lg">
-                    <Navbar.Brand className="nav-Header">Roadrunner Coffee House</Navbar.Brand>
-                    <Button className="cartBTN" onClick={() => history.push("/cart")}>Cart({cartCount})</Button>
+        <Navbar className="sticky-top top-Navbar" expand="lg">
+            <Button className="cartBTN" onClick={() => history.push("/cart")}>Cart({cartCount})</Button>
 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
 
-                        <Nav className="mr-auto">
-                            <Link className="link" to="/">Home</Link>
-                            {isAuthenticated && <Link className="link" to="/profile">My Profile</Link>}
-                            <Link className="link" to="/about">About</Link>
-                            <Link className="link" to="/events">Upcoming Events</Link>
-                            <Link className="link" to="/listen">Listen</Link>
-                            {isAuthenticated && <Link className="link" to="/order">Order</Link>}
+                <Nav className="mr-auto">
+                    <p className="title">Roadrunner Coffee House</p>
+                    <Link className="link" to="/">Home</Link>
+                    {isAuthenticated && <Link className="link" to="/profile">My Profile</Link>}
+                    <Link className="link" to="/about">About</Link>
+                    {/* <Link className="link" to="/events">Upcoming Events</Link> */}
+                    {/* <Link className="link" to="/listen">Listen</Link> */}
+                    {isAuthenticated && <Link className="link" to="/order">Order</Link>}
 
-                            {!isAuthenticated && <span>to order, you must be loged in!</span>}
+                    {!isAuthenticated && <span className="login-warning">to order, you must be loged in!</span>}
 
-                            {isAuthenticated && <Button className="loginANDLoginINBTN" onClick={() => logout()}>Log Out</Button>}
-                            {!isAuthenticated && <Button className="loginANDLoginINBTN" onClick={() => loginWithRedirect()}>Login</Button>}
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
-
-            </div>
+                    {isAuthenticated && <Button className="loginANDLoginINBTN" onClick={() => logout()}>Log Out</Button>}
+                    {!isAuthenticated && <Button className="loginANDLoginINBTN" onClick={() => loginWithRedirect()}>Login</Button>}
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 

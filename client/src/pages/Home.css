@@ -24,3 +24,11 @@
     text-align: center; 
     font-family: 'Oxygen', sans-serif;
 }
+
+.explore-btn {
+    font-family: 'Oxygen', sans-serif;
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    text-align: center; 
+    color: #3a1707; 
+}

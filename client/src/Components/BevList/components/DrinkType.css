@@ -1,9 +1,11 @@
 
 /* This is the coffee image itself */
 .coffee-img{
+   margin-top: 20px; 
     border: 2px solid #e3b098; 
     align-content: center; 
     box-shadow: 0 5px 10px -5px;
+    max-width: 100%;
 }
 
 /* This is the coffee button under the image  */

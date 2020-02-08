@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./Wrapper.css";
 import CartContext from "../../utils/CartContext";
-import drinks from "../../drinks.json";
+// import drinks from "../../drinks.json";
 
 function Wrapper(props) {
 
