@@ -5,6 +5,13 @@ import API from "../utils/API";
 
 const Events = () => {
 
+
+
+
+    const {eventArr} = useContext(CartContext); 
+    console.log(eventArr); 
+
+
     // const {eventArr} = useContext(CartContext); 
     // console.log(eventArr); 
     let eventsArr = [
