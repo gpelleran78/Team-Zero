@@ -1,20 +1,37 @@
 import React from "react";
 import "../App/DrinkForm.css";
 import Form from "react-bootstrap/Form";
+import Image from "react-bootstrap/Image";
 
 const drinkForm = (props) => {
   // console.log(props)
   return (
     // grade>90?"a":grade>80?"B":"F"
-    <div className="container">
+    <div className="container imageANDTextContainer">
 
-<h1 className="bottomTextonIMG">Select your Drink</h1>
+      <div className="row rowWITHHeaderANDOrderList">
+        <h1 className="orderingHeader">steps to ordering</h1>
+
+        <ol className="orderStepList">
+          <li>select a drink from above</li>
+          <li>customize your drink order</li>
+          <li>add your drink to your cart</li>
+        </ol>
+      </div>
+
+      <div className="row">
+        {/* <Image className="cactusImage" src="https://png.pngtree.com/png-vector/20190327/ourlarge/pngtree-continuous-line-drawing-of-vector-set-of-cute-cactus-black-and-png-image_883542.jpg"></Image> */}
+        <Image className="cactusImage" src="https://media.istockphoto.com/vectors/continuous-line-drawing-of-vector-set-of-cute-cactus-black-and-white-vector-id1022464060"></Image>
+
+      </div>
+
+      {/* Customizig drink form */}
       {props.state.drinktype === "Lattes" ? (
         <Form action="">
 
           {/* This is the temp section of the form  */}
           <div className="newFormSection">
-            <p>Would you like your Latte drink hot or cold?</p>
+            <p>Would you like your Latte, hot or cold?</p>
 
             <input
               type="radio"
@@ -629,7 +646,7 @@ const drinkForm = (props) => {
               checked={props.state.size === "Small" ? true : false}
             />{" "}
             Small
-  
+
           <input
               type="radio"
               name="size"
@@ -653,7 +670,7 @@ const drinkForm = (props) => {
               checked={props.state.extraShots === "1" ? true : false}
             />{" "}
             1 shot
-  
+
           <input
               type="radio"
               name="extraShots"
@@ -662,7 +679,7 @@ const drinkForm = (props) => {
               checked={props.state.extraShots === "2" ? true : false}
             />{" "}
             2 shots
-  
+
           <input
               type="radio"
               name="extraShots"
@@ -671,7 +688,7 @@ const drinkForm = (props) => {
               checked={props.state.extraShots === "3" ? true : false}
             />{" "}
             3 shots
-  
+
           <input
               type="radio"
               name="extraShots"
@@ -696,7 +713,7 @@ const drinkForm = (props) => {
               checked={props.state.milk === "" ? true : props.state.milk === "Whole" ? true : false}
             />{" "}
             Whole
-  
+
           <input
               type="radio"
               name="milk"
@@ -720,7 +737,7 @@ const drinkForm = (props) => {
               checked={props.state.vanilla === "true" ? true : false}
             />{" "}
             Vanilla
-  
+
           <input
               type="checkbox"
               name="hazlenut"
@@ -729,7 +746,7 @@ const drinkForm = (props) => {
               checked={props.state.hazlenut === "true" ? true : false}
             />{" "}
             Hazzlenut
-  
+
           <input
               type="checkbox"
               name="mocha"
@@ -738,7 +755,7 @@ const drinkForm = (props) => {
               checked={props.state.drinktype === "Mocha" ? true : props.state.mocha === "true" ? true : false}
             />{" "}
             Mocha
-  
+
           <input
               type="checkbox"
               name="whiteMocha"
@@ -747,7 +764,7 @@ const drinkForm = (props) => {
               checked={props.state.whiteMocha === "true" ? true : false}
             />{" "}
             White Mocha
-  
+
           <input
               type="checkbox"
               name="SFVanilla"

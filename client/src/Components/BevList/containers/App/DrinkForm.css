@@ -1,6 +1,39 @@
 
+/* Everything above the form desgin  */
+.imageANDTextContainer {
+    position: relative;
+}
+
+.rowWITHHeaderANDOrderList {
+    position: absolute; 
+}
+
+.orderingHeader{ 
+    font-family: 'Oxygen', sans-serif;
+    padding-left: 15px; 
+    margin-top: 35px; 
+
+}
+
+li {
+    margin: 5px; 
+}
+
+.orderStepList {
+    padding-top: 5px; 
+    font-family: 'Oxygen', sans-serif;
+}
+
+.cactusImage {
+    width: 100%; 
+    margin-top: 145px; 
+    margin-bottom: 20px; 
+}
+
+
+/* Start of the form desgins  */
 form{ 
-    border: 2px solid black; 
+    /* border: 2px solid black;  */
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -17,14 +50,11 @@ form{
     border: #e3b098 dotted 1px; 
 }
 
+/* Add drinnk to cart button */
 .addDrinkToCartBTN {
     border: 1px solid #e49b7f; 
     background: #e3b098; 
-    margin-top: 20px; 
     color: #3a1707; 
-}
-
-.bottomTextonIMG{
-    font-family: 'Oxygen', sans-serif;
-    margin-top: 25px; 
+    margin-top: 20px; 
+   margin-bottom: 20px; 
 }
