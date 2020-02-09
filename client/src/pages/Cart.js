@@ -3,7 +3,6 @@ import CartItem from "../Components/CartItem/CartItem";
 import CheckoutBtn from "../Components/CheckoutBtn/CheckoutBtn";
 import CartContext from "../utils/CartContext";
 
-
 function Cart() {
 
     const { cartArr } = useContext(CartContext);

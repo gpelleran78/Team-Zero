@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import Page from "../DrinkType"
+import Page from "../DrinkType";
+
+// All of the coffee images 
+import Lattes from "../SlideView/images/latte-coffee-cup.jpg"; 
+import cappuccino from "../SlideView/images/cappuccino-coffee-cup.jpg"; 
+import Frappe from "../SlideView/images/frep-coffee-image.jpg"; 
+import Mocha from "../SlideView/images/iced-mocha-image-coffee.jpg"; 
+
 
 const Wrapper = styled.div`
     width: 100%
@@ -9,27 +16,30 @@ const Wrapper = styled.div`
 
 
 export default class SlideView extends React.Component {
- 
+
     render() {
         var settings = {
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
         };
-        return(
-            <Wrapper>
-                <Slider
-                {...settings} 
-                >
-                       <Page drink={"Lattes"} source={"http://www.lovethispic.com/uploaded_images/147133-Heart-Latte.jpg"} handler={this.props.inputhandler}/>
-                       <Page drink={"Cappucino"} source={"https://cms.qz.com/wp-content/uploads/2016/07/coffee.jpg?quality=75&strip=all&w=410&h=231"} handler={this.props.inputhandler}/>
-                       <Page drink={"Frappe"} source={"https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0053/img41l.jpg"} handler={this.props.inputhandler}/>
-                       <Page drink={"Mocha"} source={"http://globalassets.starbucks.com/assets/a08ea74415f84c66b45b264f4c8e85a7.jpg"} handler={this.props.inputhandler}/>
-                        
-                </Slider>
-            </Wrapper>
+
+        return (
+                    <Wrapper>
+                        <Slider
+                            {...settings}
+                        >
+                            <Page drink={"Lattes"} source={Lattes} handler={this.props.inputhandler} />
+                            <Page drink={"Cappucino"} source={cappuccino} handler={this.props.inputhandler} />
+                            <Page drink={"Frappe"} source={Frappe} handler={this.props.inputhandler} />
+                            <Page drink={"Mocha"} source={Mocha} handler={this.props.inputhandler} />
+
+                        </Slider>
+                    </Wrapper>
         );
     }
 }
+
+

@@ -113,11 +113,13 @@ class DrinkSelect extends Component {
           state={this.state}
           handleInputChange={this.handleInputChange}
         />
-        {this.state.drinktype ? (
+
+        {/* {this.state.drinktype ? (
           <h1>how you want your {this.state.drinktype}</h1>
         ) : (
           <h1>pick a drink to customize</h1>
-        )}
+        )} */}
+
         <DrinkForm
           state={this.state}
           handleInputChange={this.handleInputChange}
@@ -149,6 +151,7 @@ class DrinkSelect extends Component {
         ) : (
           <h6>empty cart</h6>
         )} */}
+
         <DrinkList handler={this.deleteDrink} arr={this.drinklist} listFlavors={this.listFlavors}
         submitOrder={this.submitOrder}/>
       </div>

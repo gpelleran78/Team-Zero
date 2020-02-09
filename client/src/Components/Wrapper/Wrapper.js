@@ -4,6 +4,7 @@ import CartContext from "../../utils/CartContext";
 import { useAuth0 } from "../../react-auth0-spa";
 import API from "../../utils/API"; 
 
+// import drinks from "../../drinks.json";
 
 function Wrapper(props) {
 
