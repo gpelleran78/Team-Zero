@@ -21,7 +21,7 @@ function Cart() {
                         itemExtraShots={item.extraShots}
                         itemMilk={item.milk}
                         itemVanilla={item.vanilla}
-                        itemHazlenut={item.hanzlenut}
+                        itemHazlenut={item.hazlenut}
                         itemMocha={item.mocha}
                         itemWhiteMocha={item.whiteMocha}
                         itemSFVanilla={item.SFVanilla}
