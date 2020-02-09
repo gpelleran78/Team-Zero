@@ -1,0 +1,32 @@
+
+.user-profile-img {
+    align-content: center; 
+    height: 200px; 
+    width: 200px; 
+    border-radius: 50%; 
+    margin-top: 10px; 
+    border: dotted #a84e13 2px; 
+    box-shadow: 3px 3px 3px #3a1707; ; 
+
+}
+
+.Header{
+    font-family: 'Oxygen', sans-serif;
+    padding: 10px; 
+    color: #3a1707; 
+}
+
+.meta-data{
+    padding: 20px; 
+    margin: 3px; 
+    font-family: 'Oxygen', sans-serif;
+    color: #3a1707; 
+}
+
+.update-historyBTN {
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    margin-top: 10px; 
+    color: #3a1707; 
+    margin: 10px; 
+}

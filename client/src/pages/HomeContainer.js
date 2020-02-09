@@ -3,6 +3,7 @@ import "./Home.css";
 import homeData from "../../src/HomepageContainers.json"
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
 
 
 const HomeContainer = () => {
@@ -20,6 +21,7 @@ const HomeContainer = () => {
                     <Card.Body>
                         <h1 className="nameText">{i.name}</h1>
                         <p className="descriptionText">{i.description}</p>
+                        <Button className="btn explore-btn" href={i.link}> {i.button}</Button>
                     </Card.Body>
 
                 </Card>

@@ -1,7 +1,10 @@
-.navbar {
+.top-Navbar {
     font-family: 'Oxygen', sans-serif;
-    margin-bottom: 5px; 
+    margin-bottom: 10px; 
     background-color: #ffe2d4; 
+    margin-right: 0px; 
+    margin-left: 0px; 
+    box-shadow: 5px 5px 5px #3a1707; 
 }
 
 .nav-Header {
@@ -18,17 +21,33 @@
     margin: 10px; 
 }
 
+.title {
+    color: #3a1707; 
+    font-size: 25px; 
+}
+
 .link {
     color: #ca6316; 
     padding-top: 10px; 
     padding-bottom: 10px; 
 }
 
-.loginANDLoginINBTN {
+.link:active {
     color: #3a1707; 
+}
+
+.login-warning {
+    color: #3a1707; 
+    margin-top: 10px; 
+    margin-bottom: 2px; 
+}
+
+.loginANDLoginINBTN {
+    color: #ffe2d4; 
     padding-top: 10px; 
     padding-bottom: 10px;  
-    background-color: #e3b098; 
-    border: 1px solid #3a1707; 
+    background-color: #3a1707; 
+    border: 1px solid #e3b098; 
     margin-top: 2px; 
+    font-size: 15x; 
 }

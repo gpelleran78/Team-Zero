@@ -8,6 +8,7 @@ const drinkForm = (props) => {
     // grade>90?"a":grade>80?"B":"F"
     <div className="container">
 
+<h1 className="bottomTextonIMG">Select your Drink</h1>
       {props.state.drinktype === "Lattes" ? (
         <Form action="">
 
@@ -768,8 +769,7 @@ const drinkForm = (props) => {
         </form>
 
         // Choose a drink text 
-      ) : <h1 className="bottomTextonIMG">Select your Drink</h1>
-      }
+      ) : <span></span>}
 
       {/* End of the entire form */}
     </div>

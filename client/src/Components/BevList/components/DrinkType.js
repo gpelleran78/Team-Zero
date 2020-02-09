@@ -7,7 +7,7 @@ function Page(props) {
 
         <div className="container">
             <img className="coffee-img" src={props.source} alt={props.drink}></img>
-            <input className="coffee-btn btn" type="submit" value={props.drink} name="drinktype" onClick={props.handler} />
+            <button className="coffee-btn btn-lg block" type="submit" value={props.drink} name="drinktype" onClick={props.handler}>{props.drink}</button>
         </div>
     )
 }

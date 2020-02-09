@@ -34,13 +34,13 @@ require("./routes/api-routes-users")(app);
 app.use(express.static("client/build")); 
 
 //Starting the server after model sync
-// db.sequelize
-//   .sync({ force: true })
-//   .then(function () {
-//     app.listen(PORT, () => {
-//       console.log(`🌎 ==> Listening on port ${PORT}!`);
-//     });
-//   });
+db.sequelize
+  .sync({ force: true })
+  .then(function () {
+    app.listen(PORT, () => {
+      console.log(`🌎 ==> Listening on port ${PORT}!`);
+    });
+  });
 
 
 
