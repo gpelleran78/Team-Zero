@@ -12,9 +12,10 @@ function Cart() {
     return (
         <div className="cart-wrapper">
             {
-                cartArr.map(item => (
+                cartArr.map((item, index) => (
                     <CartItem
-                        key={item.id}
+                        key={index}
+                        itemIndex={index}
                         itemName={item.drinktype}
                         itemSize={item.size}
                         itemExtraShots={item.extraShots}

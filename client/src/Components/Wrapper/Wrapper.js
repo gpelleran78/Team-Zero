@@ -1,6 +1,12 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Wrapper.css";
 import CartContext from "../../utils/CartContext";
+<<<<<<< HEAD
+import { useAuth0 } from "../../react-auth0-spa";
+import API from "../../utils/API"; 
+
+=======
+>>>>>>> master
 // import drinks from "../../drinks.json";
 
 function Wrapper(props) {
@@ -9,7 +15,21 @@ function Wrapper(props) {
     const [cartItem, setCartItem] = useState(null);
     const [cartCount, setCartCount] = useState(0);
     const [cartConfirm, setCartConfirm] = useState(false);
+    const [eventArr, setEventArr] = useState([]); 
+    
+    const { isAuthenticated, user } = useAuth0();
 
+    useEffect(()=>{
+        API.getEvents()
+        .then(response => {
+            console.log("loading events useEffect hook in wrapper"); 
+            setEventArr(response.data); 
+        })
+        .catch(err => console.log(err)); 
+    },[])
+
+   
+    
     useEffect(() => {
         if (cartItem) {
             
@@ -21,6 +41,7 @@ function Wrapper(props) {
 
     useEffect(() => {
         console.log(cartArr);
+
     }, [cartArr]);
 
     useEffect(()=>{
@@ -28,15 +49,37 @@ function Wrapper(props) {
             console.log("push to database trigger"); 
             //push to database cartArr, userId, and, timestamp 
         }
-    }, [cartConfirm])
+    }, [cartConfirm]); 
 
-    function handleCartBtn() {
+    function handleCartBtn(array) {
         //reroute to cart review page to edit or continue to process order.
-        console.log("push to database here"); 
+        console.log(`checkout button clicked ${user.email}`); 
+        //push to database user email and cartArr,
+        // reset cartArr, reset cartCount, reset cartConfirm
+        console.log(array.cartArr); 
+        let log = "testlog"; 
+        let orderObj = {
+            id: user.email, 
+            orderLog: log
+        }
+        API.saveOrder(orderObj)
+        .then(response=>console.log(response))
+        .catch(err=>console.log(err))
     };
+ 
+    function loadEvents() {
+        API.getEvents()
+        .then(response => {
+            console.log("loading events useEffect hook in wrapper"); 
+            setEventArr(response.data); 
+        })
+        .catch(err => console.log(err)); 
+    }
+
+
 
     return (
-        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, cartConfirm, setCartConfirm, handleCartBtn }}>
+        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, cartConfirm, setCartConfirm, handleCartBtn, eventArr, setEventArr }}>
             <main className="wrapper">{props.children}</main>
         </CartContext.Provider>
     );

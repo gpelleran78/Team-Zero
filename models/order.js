@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Order = sequelize.define("Order", {
         id: {
             type: DataTypes.INTEGER, 
@@ -6,24 +6,9 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true
         }, 
         orderLog: {
-            type: DataTypes.STRING,
-            get: function() {
-                return JSON.parse(this.getDataValue('orderLog'));
-            }, 
-            set: function(val) {
-                return this.setDataValue('myArrayField', JSON.strifigy(val));  
-            }
+            type: DataTypes.STRING
         }
     }); 
 
-    Order.associate = function(models) {
-        Order.belongsTo(models.User); 
-    }; 
-
     return Order; 
 }
-
-
-
-
-
