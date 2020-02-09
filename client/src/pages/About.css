@@ -1,0 +1,69 @@
+
+.about-component {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.threeCactusIMG {
+    width: 100%; 
+    margin-top: 20px; 
+}
+
+.missionCard {
+    margin-top: 10px; 
+    border: 1px solid #e49b7f; 
+    margin-bottom: 30px; 
+}
+
+.cardTitle {
+    font-size: 30px; 
+    color: #3a1707;
+}
+
+.cardText {
+    font-size: 18px; 
+    margin-top: 22px; 
+    padding: 0px; 
+    color: #3a1707;
+}
+
+/* pink cactus image */
+.threePinkCactusIMG {
+    width: 100%;
+}
+
+.threePinkCactusIMG2 {
+    width: 100%; 
+    margin-bottom: 5px; 
+    position: relative;
+    top: -10px; 
+}
+
+/* The below is for the 'meet the team' */
+.teamHeader {
+    font-family: 'Oxygen', sans-serif;
+    color: #3a1707;
+    font-size: 35px; 
+    padding-left: 20px; 
+    margin-top: 20px; 
+}
+
+.meetTeamRow {
+    font-family: 'Oxygen', sans-serif;
+    color: #3a1707;
+    margin-top: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.teamMember {
+    margin-bottom: 40px; 
+}
+
+/* This is the map */
+.mapHeader{
+    margin-top: 10px; 
+}
+
+.map {
+    margin-top: 10px; 
+}
