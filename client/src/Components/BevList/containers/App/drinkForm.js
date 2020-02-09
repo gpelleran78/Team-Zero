@@ -3,8 +3,13 @@ import "../App/DrinkForm.css";
 import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
 
+
+
 const drinkForm = (props) => {
+
   // console.log(props)
+
+
   return (
     // grade>90?"a":grade>80?"B":"F"
     <div className="container imageANDTextContainer">
@@ -14,7 +19,7 @@ const drinkForm = (props) => {
 
         <ol className="orderStepList">
           <li>select a drink from above</li>
-          <li>customize your drink order</li>
+          <li>customize your drink order below</li>
           <li>add your drink to your cart</li>
         </ol>
       </div>
@@ -54,12 +59,17 @@ const drinkForm = (props) => {
               checked={props.state.drinktype === "Frappe" ? true : props.state.drinktype === "Cappucino" ? false : props.state.temp === "cold" ? true : false}
             />{" "}
             Cold
+
             </div>
 
           {/* This  is the size section of the form */}
           <div className="newFormSection">
             <p>What size would you like your drink?</p>
-            <input
+
+          
+
+       
+             <input
               type="radio"
               name="size"
               value={"Small"}
@@ -78,9 +88,12 @@ const drinkForm = (props) => {
             Large <span className="smallDefaultText"> (default) </span>
           </div>
 
+
+
           {/* This is the expresso amount section of the form  */}
           <div className="newFormSection">
             <p>Customize the amount of Espresso shots. </p>
+
             <input
               type="radio"
               name="extraShots"
@@ -116,9 +129,16 @@ const drinkForm = (props) => {
             4 shots
           </div>
 
+
+
+
           {/* This is the milk type of the form  */}
           <div className="newFormSection">
             <p>What type of milk would you like? </p>
+
+
+
+
             <input
               type="radio"
               name="milk"
@@ -793,4 +813,5 @@ const drinkForm = (props) => {
   )
 }
 
+// render(<ExpanderExample />);
 export default drinkForm;
