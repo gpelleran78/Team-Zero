@@ -4,6 +4,7 @@ import EventCard from '../Components/EventCard/EventCard';
 import API from "../utils/API";
 
 const Events = () => {
+<<<<<<< HEAD
 
 
     const {eventArr} = useContext(CartContext); 
@@ -30,6 +31,10 @@ const Events = () => {
           
         </div>
 
+=======
+    return(
+        <div></div>
+>>>>>>> master
     )
 }
 
