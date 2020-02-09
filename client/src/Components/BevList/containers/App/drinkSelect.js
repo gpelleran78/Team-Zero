@@ -6,6 +6,7 @@ import CartContext from "../../../../utils/CartContext";
 
 class DrinkSelect extends Component {
   state = {
+    id: "", 
     drinktype: "",
     temp: "",
     size: "",
@@ -41,6 +42,7 @@ class DrinkSelect extends Component {
     // console.log(this.state)
     event.preventDefault();
     let drink = {
+      id: this.state.id, 
       drinktype: this.state.drinktype,
       temp: this.state.temp,
       size: this.state.size,
@@ -62,6 +64,7 @@ class DrinkSelect extends Component {
     // console.log("drink LIST HERE", this.drinklist);
     // console.log("drink HERE", this.drinklist[0]);
     this.setState({
+      id: "", 
       drinktype: "",
       temp: "",
       size: "",

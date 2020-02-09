@@ -7,7 +7,7 @@ const drinkForm = (props) => {
     return(
 // grade>90?"a":grade>80?"B":"F"
 <div>
-  {props.state.drinktype === "Latte"?(
+  {props.state.drinktype === "Lattes"?(
     <form action="">
     <p>Hot or Cold?</p>
     <input

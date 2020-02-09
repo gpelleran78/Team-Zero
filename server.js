@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./models');
-const path = require('path'); 
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+const routes = require("./routes");
+
 
 // Middleware Functions 
 app.use(express.urlencoded({ extended: true }));
@@ -25,14 +27,12 @@ app.use(cors({
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+app.use(routes);
+// require("./routes/api-routes-orders")(app); 
+// require("./routes/api-routes-events")(app); 
 
-
-require("./routes/api-routes-drinks")(app); 
-require("./routes/api-routes-drinks")(app); 
-require("./routes/api-routes-users")(app); 
-
-app.use(express.static("client/build")); 
-
+// app.use(express.static("client/build")); 
+ 
 //Starting the server after model sync
 db.sequelize
   .sync({ force: true })
@@ -65,13 +65,4 @@ db.sequelize
 //   });
 
 
-/*
-app.use(express.static(path.join(__dirname, 'client/build'))); 
 
-// Routing (API & view)
-// app.use(routes);
-require("./routes/api-routes-drinks")(app); 
-require("./routes/api-routes-drinks")(app); 
-require("./routes/api-routes-users")(app); 
-
-*/

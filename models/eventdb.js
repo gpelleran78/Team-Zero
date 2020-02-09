@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Eventdb = sequelize.define("Eventdb", {
         id: {
             type: DataTypes.INTEGER, 
@@ -7,15 +7,9 @@ module.exports = function(sequelize, DataTypes) {
         }, 
         name: DataTypes.STRING, 
         description: DataTypes.STRING, 
-        date: DataTypes.DATE, 
-        full: DataTypes.BOOLEAN, 
+        date: DataTypes.DATE,
         image: DataTypes.STRING
     }); 
 
-    Eventdb.associate = function(models) {
-
-    }
-
     return Eventdb; 
 }
-
