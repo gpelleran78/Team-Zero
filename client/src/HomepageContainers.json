@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1, 
+        "name": "Arizona Art",
+        "image": "https://mediadc.brightspotcdn.com/dims4/default/7d380aa/2147483647/strip/true/crop/1060x600+0+0/resize/1060x600!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F14%2F14%2Fd2128a384cc782c528bb2231c7b1%2Fistock-701045616.jpg", 
+        "description": "view more local art",
+        "button": "explore",
+        "link": "https://art.xanadugallery.com/"
+    },
+    {
+        "id": 2, 
+        "name": "sustainably sourced cofee",
+        "image": "https://assets3.thrillist.com/v1/image/1642822/size/tmg-article_default_mobile;jpeg_quality=20.jpg", 
+        "description": " ",
+        "button": "explore",
+        "link": "http://www.ncausa.org/Sustainability"
+    },
+    {
+        "id": 3, 
+        "name": "Explore Events Near You",
+        "image": "https://t8f8b3g9.stackpathcdn.com/wp-content/uploads/2018/10/productive-team-building-activities-blog-header-1.png", 
+        "description": " ",
+        "button": "explore",
+        "link": "https://www.eventbrite.com/"
+    },
+    {
+        "id": 4, 
+        "name": "Podcasts",
+        "image": "https://www.weeditpodcasts.com/wp-content/uploads/elementor/thumbs/How-to-Get-More-People-to-Actually-Listen-to-Your-Podcast-oebq27q3dc1wgxkfk0n5tq7zzqsythizgdcqws9itk.jpg", 
+        "description": " ",
+        "button": "explore",
+        "link": "https://player.fm/podcasts/Arizona"
+    },
+    {
+        "id": 5, 
+        "name": "Arizona Cactus",
+        "image": "https://i.pinimg.com/originals/38/ca/5b/38ca5b5b75d5c9d558886e375a118e25.jpg", 
+        "description": " ",
+        "button": "explore",
+        "link": ""
+    }
+]

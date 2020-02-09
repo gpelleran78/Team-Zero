@@ -1,7 +1,53 @@
-.navbar {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    width: 100%;
-    margin-bottom: 5px; 
-    box-shadow: 0 3px 6px -6px
+.top-Navbar {
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom: 10px; 
+    background-color: #ffe2d4; 
+    margin-right: 0px; 
+    margin-left: 0px; 
+    box-shadow: 5px 5px 5px #3a1707; 
 }
 
+.nav-Header {
+    font-family: 'Oxygen', sans-serif;  
+    font-size: 25px;   
+    color: #ca6316;
+}
+
+.cartBTN{
+    border: 1px solid #e49b7f; 
+    background: #e3b098; 
+    margin-top: 20px; 
+    color: #3a1707; 
+    margin: 10px; 
+}
+
+.title {
+    color: #3a1707; 
+    font-size: 25px; 
+}
+
+.link {
+    color: #ca6316; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.link:active {
+    color: #3a1707; 
+}
+
+.login-warning {
+    color: #3a1707; 
+    margin-top: 10px; 
+    margin-bottom: 2px; 
+}
+
+.loginANDLoginINBTN {
+    color: #ffe2d4; 
+    padding-top: 10px; 
+    padding-bottom: 10px;  
+    background-color: #3a1707; 
+    border: 1px solid #e3b098; 
+    margin-top: 2px; 
+    font-size: 15x; 
+}
