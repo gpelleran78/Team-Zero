@@ -5,10 +5,10 @@ import CartContext from '../../utils/CartContext';
 
 function CheckoutBtn() {
 
-    const { handleCartBtn } = useContext(CartContext);
+    const { handleCartBtn, cartArr } = useContext(CartContext);
 
     function handleClick() {
-        handleCartBtn();
+        handleCartBtn({cartArr});
     };
 
     return (

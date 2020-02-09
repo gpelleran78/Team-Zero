@@ -6,8 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         }, 
         orderLog: {
-            type: DataTypes.STRING,
-           
+            type: DataTypes.STRING
         }
     }); 
 

@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const eventsController = require("../../controllers/eventsController"); 
+// const eventsController = require("../../controllers/eventsController"); 
+const db = require('../../models'); 
 
 // // Matches with "/api/books"
 // router.route("/")
@@ -13,8 +14,12 @@ const eventsController = require("../../controllers/eventsController");
 //   .put(eventsController.update)
 //   .delete(eventsController.remove);
 
-router.route("/")
-.get(eventsController.findAll);
-
-
+router.get("/", function(req, res) {
+    db.Eventdb
+    .findAll({})
+    .then(function (dbEvents) {
+        res.json(dbEvents);
+        console.log(dbEvents);
+    });
+})
 module.exports = router;

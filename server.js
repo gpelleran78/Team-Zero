@@ -1,12 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+
+const routes = require("./routes"); 
 const db = require('./models');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
-
-const routes = require("./routes");
-
+const PORT = process.env.PORT || 3002;
 
 // Middleware Functions 
 app.use(express.urlencoded({ extended: true }));
@@ -22,12 +21,8 @@ app.use(cors({
 }));
 
 
+app.use(routes); 
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-app.use(routes);
 // require("./routes/api-routes-orders")(app); 
 // require("./routes/api-routes-events")(app); 
 
@@ -37,6 +32,7 @@ app.use(routes);
 db.sequelize
   .sync({ force: true })
   .then(function () {
+    console.log(process.env); 
     app.listen(PORT, () => {
       console.log(`🌎 ==> Listening on port ${PORT}!`);
     });

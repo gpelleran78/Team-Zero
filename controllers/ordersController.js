@@ -4,9 +4,9 @@ module.exports = {
     findAll: function(req, res) {
         db.Order
         .findAll({})
-        .then(function (dbEvents) {
-            res.json(dbEvents);
-            console.log(dbEvents);
+        .then(function (dbOrders) {
+            res.json(dbOrders);
+            console.log(dbOrders);
         });
     }
     
