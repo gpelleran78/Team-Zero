@@ -2,7 +2,8 @@ import React from "react";
 import "../App/DrinkForm.css";
 import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
-
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
 
 
 const drinkForm = (props) => {
@@ -36,9 +37,42 @@ const drinkForm = (props) => {
 
           {/* This is the temp section of the form  */}
           <div className="newFormSection">
-            <p>Would you like your Latte, hot or cold?</p>
+            <p className="customizeQuestion">Would you like your Latte, hot or cold?</p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="temp"
+                // value="1"
+                // value={props.state.temp}
+                value={"hot"}
+                onChange={props.handleInputChange}
+                selected={props.state.temp}
+                checked={props.state.drinktype === "Cappucino" ? true : props.state.drinktype === "Frappe" ? false : props.state.temp === "hot" ? true : false}
+              >
+                Hot
+              </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="temp"
+                // value="2"
+                // value={props.state.temp}
+                value={"cold"}
+                onChange={props.handleInputChange}
+                selected={props.state.temp}
+                checked={props.state.drinktype === "Frappe" ? true : props.state.drinktype === "Cappucino" ? false : props.state.temp === "cold" ? true : false}
+              >
+                Cold
+              </ToggleButton>
+            </ButtonGroup>
+
+
+            {/* <input
               type="radio"
               name="temp"
               // value={props.state.temp}
@@ -47,9 +81,9 @@ const drinkForm = (props) => {
               selected={props.state.temp}
               checked={props.state.drinktype === "Cappucino" ? true : props.state.drinktype === "Frappe" ? false : props.state.temp === "hot" ? true : false}
             />{" "}
-            Hot
+            Hot */}
 
-            <input
+            {/* <input
               type="radio"
               name="temp"
               // value={props.state.temp}
@@ -58,43 +92,116 @@ const drinkForm = (props) => {
               selected={props.state.temp}
               checked={props.state.drinktype === "Frappe" ? true : props.state.drinktype === "Cappucino" ? false : props.state.temp === "cold" ? true : false}
             />{" "}
-            Cold
+            Cold */}
 
-            </div>
+          </div>
 
           {/* This  is the size section of the form */}
           <div className="newFormSection">
-            <p>What size would you like your drink?</p>
+            <p className="customizeQuestion">What size would you like your drink?</p>
 
-          
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="size"
+                value={"Small"}
+                onChange={props.handleInputChange}
+                checked={props.state.size === "Small" ? true : false}
+              >
+                Small
+          </ToggleButton>
 
-       
-             <input
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="size"
+                value={"Large"}
+                onChange={props.handleInputChange}
+                checked={props.state.size === "" ? true : props.state.size === "Large" ? true : false}
+              >
+                Large <span className="smallDefaultText"> (default) </span>
+              </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="size"
               value={"Small"}
               onChange={props.handleInputChange}
               checked={props.state.size === "Small" ? true : false}
             />{" "}
-            Small
+            Small */}
 
-            <input
+            {/* <input
               type="radio"
               name="size"
               value={"Large"}
               onChange={props.handleInputChange}
               checked={props.state.size === "" ? true : props.state.size === "Large" ? true : false}
             />{" "}
-            Large <span className="smallDefaultText"> (default) </span>
+            Large <span className="smallDefaultText"> (default) </span> */}
           </div>
 
 
 
           {/* This is the expresso amount section of the form  */}
           <div className="newFormSection">
-            <p>Customize the amount of Espresso shots. </p>
+            <p className="customizeQuestion">Customize the amount of Espresso shots. </p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value={"1"}
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "1" ? true : false}
+              >
+                1 shot
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value={"2"}
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "2" ? true : false}
+              >
+                2 shots
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value="3"
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "3" ? true : false}
+              >
+                3 shots
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value="4"
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "4" ? true : false}
+              >
+                4 shots
+            </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="extraShots"
               value={"1"}
@@ -102,113 +209,223 @@ const drinkForm = (props) => {
               checked={props.state.extraShots === "1" ? true : false}
 
             />{" "}
-            1 shot
-    <input
+            1 shot */}
+            {/* <input
               type="radio"
               name="extraShots"
               value={"2"}
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "2" ? true : false}
             />{" "}
-            2 shots
-    <input
+            2 shots */}
+            {/* <input
               type="radio"
               name="extraShots"
               value="3"
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "3" ? true : false}
             />{" "}
-            3 shots
-    <input
+            3 shots */}
+            {/* <input
               type="radio"
               name="extraShots"
               value="4"
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "4" ? true : false}
             />{" "}
-            4 shots
+            4 shots */}
           </div>
-
-
 
 
           {/* This is the milk type of the form  */}
           <div className="newFormSection">
-            <p>What type of milk would you like? </p>
+            <p className="customizeQuestion">What type of milk would you like? </p>
 
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="Whole"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "" ? true : props.state.milk === "Whole" ? true : false}
+              >
+                Whole
+          </ToggleButton>
 
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="skim"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "skim" ? true : false}
+              >
+                Skim
+          </ToggleButton>
 
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="soy"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "soy" ? true : false}
+              >
+                Soy
+          </ToggleButton>
 
-            <input
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="almond"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "almond" ? true : false}
+              >
+                Almond
+          </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="milk"
               value="Whole"
               onChange={props.handleInputChange}
               checked={props.state.milk === "" ? true : props.state.milk === "Whole" ? true : false}
             />{" "}
-            Whole
-    <input
+            Whole */}
+            {/* <input
               type="radio"
               name="milk"
               value="skim"
               onChange={props.handleInputChange}
               checked={props.state.milk === "skim" ? true : false}
             />{" "}
-            Skim
-    <input
+            Skim */}
+            {/* <input
               type="radio"
               name="milk"
               value="soy"
               onChange={props.handleInputChange}
               checked={props.state.milk === "soy" ? true : false}
             />{" "}
-            Soy
-    <input
+            Soy */}
+            {/* <input
               type="radio"
               name="milk"
               value="almond"
               onChange={props.handleInputChange}
               checked={props.state.milk === "almond" ? true : false}
             />{" "}
-            Almond
+            Almond */}
           </div>
 
           {/* this is the falvors section of the form  */}
           <div className="newFormSection">
-            <p>Customize the falvor of your drink!</p>
-            <input className="customCheckBox"
+            <p className="customizeQuestion">Customize the falvor of your drink!</p>
+
+            <ButtonGroup toggle className="mb-2 buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="vanilla"
+                value={props.state.vanilla === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.vanilla === "true" ? true : false}
+              >
+                Vanilla
+               </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="hazlenut"
+                value={props.state.hazlenut === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.hazlenut === "true" ? true : false}
+              >
+                Hazlenut
+              </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="mocha"
+                value={props.state.mocha === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.drinktype === "Mocha" ? true : props.state.mocha === "true" ? true : false}
+              >
+                Mocha
+            </ToggleButton>
+            </ButtonGroup>
+
+            <ButtonGroup toggle className="mb-2 buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="whiteMocha"
+                value={props.state.whiteMocha === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.whiteMocha === "true" ? true : false}
+              >
+                White Mocha
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="SFVanilla"
+                value={props.state.SFVanilla === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.SFVanilla === "true" ? true : false}
+              >
+                Sugar-Free Vanilla
+            </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input className="customCheckBox"
               type="checkbox"
               name="vanilla"
               value={props.state.vanilla === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.vanilla === "true" ? true : false}
             />{" "}
-            Vanilla
-    <input className="customCheckBox"
+            Vanilla */}
+            {/* <input className="customCheckBox"
               type="checkbox"
               name="hazlenut"
               value={props.state.hazlenut === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.hazlenut === "true" ? true : false}
             />{" "}
-            Hazzlenut
-    <input className="customCheckBox"
+            Hazzlenut */}
+            {/* <input className="customCheckBox"
               type="checkbox"
               name="mocha"
               value={props.state.mocha === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.drinktype === "Mocha" ? true : props.state.mocha === "true" ? true : false}
             />{" "}
-            Mocha
-    <input className="customCheckBox"
+            Mocha */}
+            {/* <input className="customCheckBox"
               type="checkbox"
               name="whiteMocha"
               value={props.state.whiteMocha === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.whiteMocha === "true" ? true : false}
             />{" "}
-            White Mocha
-    <input className="customCheckBox"
+            White Mocha */}
+            {/* <input className="customCheckBox"
               type="checkbox"
               name="SFVanilla"
               value={props.state.SFVanilla === "false" ? "true" : "false"}
@@ -216,7 +433,7 @@ const drinkForm = (props) => {
               checked={props.state.SFVanilla === "true" ? true : false}
 
             />{" "}
-            SF Vanilla
+            SF Vanilla */}
           </div>
 
           {/* this  is the notes section of the form  */}
@@ -230,19 +447,34 @@ const drinkForm = (props) => {
 
         </Form>
 
-
-
         // ++++++++++++++++++++++++++++++++++++++++
         // ++++++++++++++++++++++++++++++++++++++++
         // This is the start of a new drink 
       ) : props.state.drinktype === "Cappucino" ? (
-        <form action="">
+        <Form action="">
 
           {/* This is the temp section of the form  */}
           <div className="newFormSection">
-            <p>Our Cappucinos are only served hot</p>
+            <p className="customizeQuestion">Our Cappucinos are only served hot</p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="temp"
+                // value="1"
+                // value={props.state.temp}
+                value={"hot"}
+                onChange={props.handleInputChange}
+                selected={props.state.temp}
+                checked={props.state.drinktype === "Cappucino" ? true : props.state.drinktype === "Frappe" ? false : props.state.temp === "hot" ? true : false}
+              >
+                Hot
+              </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="temp"
               // value={props.state.temp}
@@ -251,177 +483,367 @@ const drinkForm = (props) => {
               selected={props.state.temp}
               checked={props.state.drinktype === "Cappucino" ? true : props.state.drinktype === "Frappe" ? false : props.state.temp === "hot" ? true : false}
             />{" "}
-            Hot
-            </div>
+            Hot */}
+          </div>
+
 
           {/* This  is the size section of the form */}
           <div className="newFormSection">
-            <p>What size would you like your drink?</p>
+            <p className="customizeQuestion">What size would you like your drink?</p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="size"
+                value={"Small"}
+                onChange={props.handleInputChange}
+                checked={props.state.size === "Small" ? true : false}
+              >
+                Small
+          </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="size"
+                value={"Large"}
+                onChange={props.handleInputChange}
+                checked={props.state.size === "" ? true : props.state.size === "Large" ? true : false}
+              >
+                Large <span className="smallDefaultText"> (default) </span>
+              </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="size"
               value={"Small"}
               onChange={props.handleInputChange}
               checked={props.state.size === "Small" ? true : false}
             />{" "}
-            Small
+            Small */}
 
-          <input
+            {/* <input
               type="radio"
               name="size"
               value={"Large"}
               onChange={props.handleInputChange}
               checked={props.state.size === "" ? true : props.state.size === "Large" ? true : false}
             />{" "}
-            Large <span className="smallDefaultText"> (default) </span>
+            Large <span className="smallDefaultText"> (default) </span> */}
           </div>
 
 
           {/* This is the expresso amount section of the form  */}
           <div className="newFormSection">
-            <p>Customize the amount of Espresso shots. </p>
+            <p className="customizeQuestion">Customize the amount of Espresso shots. </p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value={"1"}
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "1" ? true : false}
+              >
+                1 shot
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value={"2"}
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "2" ? true : false}
+              >
+                2 shots
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value="3"
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "3" ? true : false}
+              >
+                3 shots
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="extraShots"
+                value="4"
+                onChange={props.handleInputChange}
+                checked={props.state.extraShots === "4" ? true : false}
+              >
+                4 shots
+            </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="extraShots"
               value={"1"}
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "1" ? true : false}
             />{" "}
-            1 shot
+            1 shot */}
 
-          <input
+            {/* <input
               type="radio"
               name="extraShots"
               value={"2"}
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "2" ? true : false}
             />{" "}
-            2 shots
+            2 shots */}
 
-          <input
+            {/* <input
               type="radio"
               name="extraShots"
               value="3"
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "3" ? true : false}
             />{" "}
-            3 shots
+            3 shots */}
 
-          <input
+            {/* <input
               type="radio"
               name="extraShots"
               value="4"
               onChange={props.handleInputChange}
               checked={props.state.extraShots === "4" ? true : false}
             />{" "}
-            4 shots
+            4 shots */}
           </div>
 
 
           {/* This is the milk type of the form  */}
           <div className="newFormSection">
-            <p>What type of milk would you like? </p>
+            <p className="customizeQuestion">What type of milk would you like? </p>
 
-            <input
+            <ButtonGroup toggle className="buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="Whole"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "" ? true : props.state.milk === "Whole" ? true : false}
+              >
+                Whole
+          </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="skim"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "skim" ? true : false}
+              >
+                Skim
+          </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="soy"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "soy" ? true : false}
+              >
+                Soy
+          </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="milk"
+                value="almond"
+                onChange={props.handleInputChange}
+                checked={props.state.milk === "almond" ? true : false}
+              >
+                Almond
+          </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="radio"
               name="milk"
               value="Whole"
               onChange={props.handleInputChange}
               checked={props.state.milk === "" ? true : props.state.milk === "Whole" ? true : false}
             />{" "}
-            Whole
+            Whole */}
 
-          <input
+            {/* <input
               type="radio"
               name="milk"
               value="skim"
               onChange={props.handleInputChange}
               checked={props.state.milk === "skim" ? true : false}
             />{" "}
-            Skim
+            Skim */}
 
-          <input
+            {/* <input
               type="radio"
               name="milk"
               value="soy"
               onChange={props.handleInputChange}
               checked={props.state.milk === "soy" ? true : false}
             />{" "}
-            Soy
+            Soy */}
 
-          <input
+            {/* <input
               type="radio"
               name="milk"
               value="almond"
               onChange={props.handleInputChange}
               checked={props.state.milk === "almond" ? true : false}
             />{" "}
-            Almond
+            Almond */}
           </div>
 
           {/* this is the falvors section of the form  */}
           <div className="newFormSection">
-            <p>Customize the falvor of your drink!</p>
-            <input
+            <p className="customizeQuestion">Customize the falvor of your drink!</p>
+
+            <ButtonGroup toggle className="mb-2 buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="vanilla"
+                value={props.state.vanilla === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.vanilla === "true" ? true : false}
+              >
+                Vanilla
+               </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="hazlenut"
+                value={props.state.hazlenut === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.hazlenut === "true" ? true : false}
+              >
+                Hazlenut
+              </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="checkbox"
+                name="mocha"
+                value={props.state.mocha === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.drinktype === "Mocha" ? true : props.state.mocha === "true" ? true : false}
+              >
+                Mocha
+            </ToggleButton>
+            </ButtonGroup>
+
+            <ButtonGroup toggle className="mb-2 buttonGroup">
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="whiteMocha"
+                value={props.state.whiteMocha === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.whiteMocha === "true" ? true : false}
+              >
+                White Mocha
+            </ToggleButton>
+
+              <ToggleButton
+                className="toggleBTN"
+                variant="info"
+                type="radio"
+                name="SFVanilla"
+                value={props.state.SFVanilla === "false" ? "true" : "false"}
+                onChange={props.handleInputChange}
+                checked={props.state.SFVanilla === "true" ? true : false}
+              >
+                Sugar-Free Vanilla
+            </ToggleButton>
+            </ButtonGroup>
+
+            {/* <input
               type="checkbox"
               name="vanilla"
               value={props.state.vanilla === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.vanilla === "true" ? true : false}
             />{" "}
-            Vanilla
+            Vanilla */}
 
-          <input
+            {/* <input
               type="checkbox"
               name="hazlenut"
               value={props.state.hazlenut === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.hazlenut === "true" ? true : false}
             />{" "}
-            Hazzlenut
+            Hazzlenut */}
 
-          <input
+          {/* <input
               type="checkbox"
               name="mocha"
               value={props.state.mocha === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.drinktype === "Mocha" ? true : props.state.mocha === "true" ? true : false}
             />{" "}
-            Mocha
+            Mocha */}
 
-          <input
+          {/* <input
               type="checkbox"
               name="whiteMocha"
               value={props.state.whiteMocha === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.whiteMocha === "true" ? true : false}
             />{" "}
-            White Mocha
+            White Mocha */}
 
-          <input
+          {/* <input
               type="checkbox"
               name="SFVanilla"
               value={props.state.SFVanilla === "false" ? "true" : "false"}
               onChange={props.handleInputChange}
               checked={props.state.SFVanilla === "true" ? true : false}
             />{" "}
-            SF Vanilla
+            SF Vanilla */}
           </div>
 
           {/* this  is the notes section of the form  */}
           <div className="newFormSection">
-            <p>Add extra notes about your drink for your barista.</p>
-            <textarea rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
+            <textarea className="notesArea" placeholder="Add extra notes about your drink for your barista." rows="5" cols="40" value={props.state.notes} name="notes" onChange={props.handleInputChange}></textarea>
             <br />
-            <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink} />
           </div>
 
           {/* "Add drink to cart btn" */}
-          <input type="submit" value="Add Drink To Cart" onClick={props.handleNewDrink} />
+          <input className="addDrinkToCartBTN btn" type="submit" value="Add To Cart" onClick={props.handleNewDrink} />
 
-        </form>
+        </Form>
 
 
         // ++++++++++++++++++++++++++++++++++++++++
