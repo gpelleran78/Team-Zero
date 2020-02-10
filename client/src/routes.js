@@ -11,7 +11,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile"; 
 import Checkout from "./pages/Checkout";
 import MyOrders from "./pages/MyOrders";
-
+import Update from "./pages/Update"; 
 
 import Contact from "./Components/Contact/Contact"; 
 import FindUs from "./Components/FindUs/FindUs"; 
@@ -31,6 +31,7 @@ function Routes() {
             <PrivateRoute path="/cart" component={Cart} />
             <PrivateRoute path="/checkout" component={Checkout}/>
             <PrivateRoute path="/myorders" component={MyOrders}/>
+            <PrivateRoute path="/myupdate" component={Update}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>

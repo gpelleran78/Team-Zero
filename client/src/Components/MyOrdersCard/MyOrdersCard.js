@@ -1,19 +1,13 @@
-import React, { useContext } from 'react';
-import "./CartItem.css";
+import React from "react";
+import "./MyOrdersCard.css";
 import Button from "react-bootstrap/Button";
-import CartContext from "../../utils/CartContext"; 
-import { useAuth0 } from "../../react-auth0-spa";
 
 let flavors = "";
 let shots = "";
 let size = "";
-let milk = ""; 
+let milk = "";
 
-const CartItem = props => {
-    
-    function editOrder(item) {
-        console.log(`edit this order fired ${item}`)
-    }
+const MyOrdersCard = (props) => {
 
     if (props.itemExtraShots === "1") {
         shots = "1 extra shot"
@@ -70,17 +64,31 @@ const CartItem = props => {
 
 
     return (
-        <div className="cart-item">
+        <div className="myorders-card">
             <h3>{props.itemName}</h3>
             <h4>Size: {size}</h4>
             <h4>Flavors: {flavors}</h4>
             <h4>Shots: {shots}</h4>
             <h4>Milk: {milk}</h4>
             <h5>Notes: {props.itemNotes}</h5>
-            <Button variant="success" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
-            <br />
+            <p>Purchase Date: {props.date}</p>
         </div>
-    )
+    );
+    // return(
+    //     <div className="order-card-item">
+    //     <h3>{props.itemName}</h3>
+    //     <h4>Size: {size}</h4>
+    //     <h4>Flavors: {flavors}</h4>
+    //     <h4>Shots: {shots}</h4>
+    //     <h4>Milk: {milk}</h4>
+    //     <h5>Notes: {props.itemNotes}</h5>
+    //     <Button variant="success" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
+    //     <br />
+    // </div>
+    // )
 }
 
-export default CartItem; 
+export default MyOrdersCard;
+
+
+
