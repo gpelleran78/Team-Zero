@@ -5,6 +5,7 @@ import API from "../utils/API";
 
 const Events = () => {
 
+
     const {eventArr} = useContext(CartContext); 
     console.log(eventArr); 
     // let eventsArr = [
@@ -28,6 +29,7 @@ const Events = () => {
     //         date: "Feb 17, 2020", 
     //         decription: "Live Local Monday featuring Tucson native musician, Brian Lopez", 
     //         image: "https://media.giphy.com/media/l41lOzTIL8lfZ15fy/source.gif"
+
 
     //     }
     // ]
