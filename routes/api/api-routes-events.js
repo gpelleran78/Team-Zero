@@ -22,4 +22,11 @@ router.get("/", function(req, res) {
         console.log(dbEvents);
     });
 })
+
+router.post("/admin", function(req, res){
+    db.Eventdb
+    .create({
+
+    })
+})
 module.exports = router;

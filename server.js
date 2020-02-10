@@ -30,9 +30,9 @@ app.use(routes);
  
 //Starting the server after model sync
 db.sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .then(function () {
-    console.log(process.env); 
+    console.log(__dirname); 
     app.listen(PORT, () => {
       console.log(`🌎 ==> Listening on port ${PORT}!`);
     });

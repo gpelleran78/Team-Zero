@@ -9,7 +9,8 @@ import Cart from "./pages/Cart";
 import Login from "./Components/Login/Login";
 import About from "./pages/About"; 
 import Profile from "./pages/Profile"; 
-
+import Checkout from "./pages/Checkout";
+import MyOrders from "./pages/MyOrders";
 
 
 import Contact from "./Components/Contact/Contact"; 
@@ -28,6 +29,8 @@ function Routes() {
             <PrivateRoute path="/listen" component={Listen} />
             <Route path="/login" component={Login} />
             <PrivateRoute path="/cart" component={Cart} />
+            <PrivateRoute path="/checkout" component={Checkout}/>
+            <PrivateRoute path="/myorders" component={MyOrders}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/findus" component={FindUs}/>

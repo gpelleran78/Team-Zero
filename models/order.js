@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true, 
             primaryKey: true
         }, 
+        email: {
+            type: DataTypes.STRING,
+        },
         orderLog: {
             type: DataTypes.STRING
         }
