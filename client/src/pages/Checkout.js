@@ -1,6 +1,8 @@
-import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
-import API from "../utils/API";
+import React, { useContext } from "react"; 
+import CartContext from "../utils/CartContext"; 
+import { useAuth0 } from "../react-auth0-spa"; 
+import API from "../utils/API"; 
+
 import "../pages/Checkout.css";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
@@ -8,19 +10,16 @@ import Image from "react-bootstrap/Image";
 // imported images 
 import plants from "../pages/AboutPageIMG/NEWthree-plants.jpg"
 
+function Checkout () { 
 
-function Checkout() {
+    const { setCartConfirm } = useContext(CartContext); 
+ 
+    setCartConfirm(true); 
 
-    // const { user } = useAuth0(); 
-    // let email = user.email; 
-
-
-    // API.saveOrder({
-
-    // })
-
-    return (
-        <div className="container checkout-page text-center">
+    
+    return(
+      
+       <div className="container checkout-page text-center">
            
             <div className="row">
                 <Card className="orderCard">
@@ -30,6 +29,7 @@ function Checkout() {
             <div className="row">
                 <Image className="threeCactusIMG1" src={plants}></Image>
             </div>
+
         </div>
     )
 }

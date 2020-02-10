@@ -12,7 +12,9 @@ function CheckoutBtn() {
 
     function handleClick() {
         handleCartBtn({cartArr});
+        
         history.push("/checkout"); 
+
     };
 
     return (
