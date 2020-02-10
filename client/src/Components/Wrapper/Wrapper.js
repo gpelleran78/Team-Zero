@@ -18,10 +18,11 @@ function Wrapper(props) {
     
     const { isAuthenticated, user } = useAuth0();
 
+    
     useEffect(()=>{
         API.getEvents()
         .then(response => {
-            console.log("loading events useEffect hook in wrapper"); 
+            //console.log("loading events useEffect hook in wrapper"); 
             setEventArr(response.data); 
         })
         .catch(err => console.log(err)); 
@@ -51,18 +52,19 @@ function Wrapper(props) {
     }, [cartConfirm]); 
 
     function handleCartBtn(array) {
+        
         //reroute to cart review page to edit or continue to process order.
         console.log(`checkout button clicked ${user.email}`); 
         //push to database user email and cartArr,
         // reset cartArr, reset cartCount, reset cartConfirm
         console.log(array.cartArr); 
-        let log = "testlog"; 
+        
         let orderObj = {
-            id: user.email, 
-            orderLog: log
+            email: user.email, 
+            orderLog: "testinglog"
         }
         API.saveOrder(orderObj)
-        .then(response=>console.log(response))
+        .then(response=>console.log(response.data))
         .catch(err=>console.log(err))
     };
  
@@ -78,7 +80,7 @@ function Wrapper(props) {
 
 
     return (
-        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, cartConfirm, setCartConfirm, handleCartBtn, eventArr, setEventArr }}>
+        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, cartConfirm, setCartConfirm, handleCartBtn, eventArr, setEventArr}}>
             <main className="wrapper">{props.children}</main>
         </CartContext.Provider>
     );

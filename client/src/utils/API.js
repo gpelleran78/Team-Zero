@@ -1,16 +1,22 @@
 import axios from "axios";
 
-export default {
+// axios.create({
+//     // baseURL: __dirname,
+//     responseType: "json"
+//   });
 
-    getOrder: function(id) {
-        return axios.get("http://localhost:3002/api/order/" + id); 
+export default {
+    //get user's orders
+    getOrder: function(email) {
+        return axios.get("http://localhost:3002/api/orders/" + email); 
     }, 
-    saveOrder: function(postOrder) {
-        return axios.post("http://localhost:3002/api/order", postOrder); 
+    saveOrder: function(orderObj) {
+        return axios.post("http://localhost:3002/api/orders", orderObj); 
     }, 
     deleteOrder: function(id) {
-        return axios.delete("http://localhost:3002/api/order/" + id);
+        return axios.delete("http://localhost:3002/api/orders/" + id);
     }, 
+    // get all events
     getEvents: function() {
         return axios.get("http://localhost:3002/api/events"); 
     }

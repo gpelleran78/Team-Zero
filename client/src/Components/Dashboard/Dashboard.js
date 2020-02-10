@@ -3,6 +3,7 @@ import './Dashboard.css';
 import Button from 'react-bootstrap/Button';
 import Media from 'react-bootstrap/Media';
 import { useAuth0 } from "../../react-auth0-spa";
+import { useHistory } from "react-router-dom"; 
 
 const Dashboard = () => {
     const { user } = useAuth0();
@@ -11,7 +12,7 @@ const Dashboard = () => {
     function viewOrders() {
         console.log("view user's order history function fire")
     }
-
+    let history = useHistory(); 
     return (
         <div className="container">
             {/* user image  */}
@@ -76,7 +77,7 @@ const Dashboard = () => {
                     <br />
 
                     <Button
-                        onClick={() => { viewOrders() }}
+                        onClick={() => history.push("/myorders")}
                         className="update-historyBTN">
                         view my order history
                 </Button>
