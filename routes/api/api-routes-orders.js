@@ -5,12 +5,7 @@ const db = require('../../models');
 
 // Post user's order to database 
 router.post("/", function(req, res){
-  let email = "testlog@testlog.com"; 
-  let orderLog = "test log"; 
-  db.Order.create({ 
-    email: email, 
-    orderLog: orderLog
-  }).then(function(req, res){
+  db.Order.create(req.body).then(function(req, res){
     res.json(dbOrder); 
     console.log(dbOrder); 
   }); 

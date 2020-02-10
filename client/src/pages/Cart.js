@@ -8,10 +8,14 @@ function Cart() {
 
     const { cartArr } = useContext(CartContext);
     // need to update state in this component
-   
+    let message; 
+   if (cartArr.length === 0) {
+     message = "Whoops! Looks like you haven't added anything to your order yet!"
+   }
 
     return (
         <div className="cart-wrapper">
+                <h3>{message}</h3>
             {
                 cartArr.map((item, index) => (
                     <CartItem

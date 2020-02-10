@@ -5,14 +5,20 @@ import Media from 'react-bootstrap/Media';
 import { useAuth0 } from "../../react-auth0-spa";
 import { useHistory } from "react-router-dom"; 
 
+
 const Dashboard = () => {
     const { user } = useAuth0();
     console.log(user);
-
-    function viewOrders() {
-        console.log("view user's order history function fire")
-    }
     let history = useHistory(); 
+
+    function viewOrders(email) {
+        history.push("/myorders");
+    }
+
+    function updateInfo(email) {
+        history.push("/myupdate"); 
+    }
+    
     return (
         <div className="container">
             {/* user image  */}
@@ -69,7 +75,7 @@ const Dashboard = () => {
                 {/* These are the updae info and past hostory btns  */}
                 <div className="row justify-content-center">
                     <Button
-                        onClick={() => { console.log("update info button triggered") }}
+                        onClick={() => updateInfo(user.email)}
                         className="update-historyBTN">
                         update my information
                 </Button>
@@ -77,7 +83,7 @@ const Dashboard = () => {
                     <br />
 
                     <Button
-                        onClick={() => history.push("/myorders")}
+                        onClick={() => viewOrders(user.email)}
                         className="update-historyBTN">
                         view my order history
                 </Button>
@@ -90,3 +96,4 @@ const Dashboard = () => {
 
 
 export default Dashboard; 
+//history.push("/myorders")
