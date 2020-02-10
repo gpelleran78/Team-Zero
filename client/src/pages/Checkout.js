@@ -23,7 +23,7 @@ function Checkout() {
         <div className="container checkout-page text-center">
            
             <div className="row">
-                <Card className="card">
+                <Card className="orderCard">
                     <Card.Title className="cardText1">Your order has been submitted and will be ready for pick up in 15 minutes!</Card.Title>
                 </Card>
             </div>
