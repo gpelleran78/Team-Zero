@@ -5,13 +5,13 @@
 
 .threeCactusIMG {
     width: 100%; 
-    margin-top: 20px; 
+    margin-top: 50px; 
 }
 
 .missionCard {
-    margin-top: 10px; 
     border: 1px solid #e49b7f; 
     margin-bottom: 30px; 
+    margin-top: 0px;
 }
 
 .cardTitle {

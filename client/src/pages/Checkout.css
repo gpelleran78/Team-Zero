@@ -1,0 +1,22 @@
+
+.threeCactusIMG1 {
+    width: 100%; 
+    margin-top: 60px; 
+}
+
+.card {
+    margin-top: 140px; 
+    margin-right: 10px; 
+    margin-left: 10px; 
+    padding-top: 30px; 
+    padding-bottom: 20px; 
+    padding-right: 10px; 
+    padding-left: 10px; 
+    background-color: #f3e9e6; 
+    border: dotted 1px #ce784d; 
+    box-shadow: 2px 2px 10px #3a1707;
+}
+
+.cardText1{
+    line-height: 30px; 
+}

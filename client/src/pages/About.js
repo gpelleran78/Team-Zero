@@ -14,7 +14,6 @@ import geremy from "../pages/AboutPageIMG/geremyIMG.jpg"
 import goose from "../pages/AboutPageIMG/gooseIMG.jpg"
 import miyoung from "../pages/AboutPageIMG/MiyoungIMG.jpg"
 import pinkCactus1 from "../pages/AboutPageIMG/pink-cactus1.jpg"
-import pinkCactus2 from "../pages/AboutPageIMG/pink-cactus2.jpg"
 
 function About() {
     let history = useHistory();
@@ -26,7 +25,6 @@ function About() {
                 <Image className="threeCactusIMG" src={plants}></Image>
             </div>
 
-
             <Card className="text-center missionCard">
                 <Card.Body>
                     <Card.Title className="cardTitle">Our Mission at Road Runner Coffee</Card.Title>
@@ -35,11 +33,6 @@ function About() {
                 </Card.Text>
                 </Card.Body>
             </Card>
-
-            <div className="row">
-                <Image className="threePinkCactusIMG" src={pinkCactus1}></Image>
-            </div>
-
 
             {/* This is the meet the team  */}
             <div className="row">
@@ -121,10 +114,12 @@ function About() {
             </div>
             {/* End of team members */}
 
+            {/* Three pink images */}
             <div className="row">
-                <Image className="threePinkCactusIMG2" src={pinkCactus2}></Image>
+                <Image className="threePinkCactusIMG" src={pinkCactus1}></Image>
             </div>
 
+            {/* Location information */}
             <div classNmae="row">
                 <h1 className="mapHeader"> our location</h1>
             </div>
