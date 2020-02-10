@@ -11,7 +11,7 @@ const HomeContainer = () => {
     return (
         <div>
             {homeData.map(i => (
-                <Card className="cards eventCards">
+                <Card className="eventCards1">
 
                     {/* This card is holding the image  */}
             

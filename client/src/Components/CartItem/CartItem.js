@@ -1,8 +1,11 @@
+
 import React, { useContext } from 'react';
 import "./CartItem.css";
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 import CartContext from "../../utils/CartContext"; 
 import { useAuth0 } from "../../react-auth0-spa";
+
 
 let flavors = "";
 let shots = "";
@@ -69,17 +72,26 @@ const CartItem = props => {
     }
 
 
+
     return (
-        <div className="cart-item">
-            <h3>{props.itemName}</h3>
-            <h4>Size: {size}</h4>
-            <h4>Flavors: {flavors}</h4>
-            <h4>Shots: {shots}</h4>
-            <h4>Milk: {milk}</h4>
-            <h5>Notes: {props.itemNotes}</h5>
-            <Button variant="success" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
-            <br />
-        </div>
+      <div className="container">
+            <div className="row">
+                <Card>
+                    <Card.Body>
+                        <Card.Text className="cart-item">
+                           <h3>{props.itemName}</h3>
+                            <h4>Size: {size}</h4>
+                           <h4>Flavors: {flavors}</h4>
+                          <h4>Shots: {shots}</h4>
+                          <h4>Milk: {milk}</h4>
+                         <h5>Notes: {props.itemNotes}</h5>
+                        </Card.Text>
+
+                        <Button variant="success" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+     </div> 
     )
 }
 
