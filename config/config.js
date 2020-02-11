@@ -1,23 +1,22 @@
 module.exports = {
-    development: {
-      "username": "root",
-      "password": "mkchung8",
-      "database": "roadrunner_db",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "operatorsAliases": false
-    },
-    test: {
-      "username": "root",
-      "password": null,
-      "database": "roadrunner_db",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "operatorsAliases": false
-    },
-    production: {
-      "use_env_variable": "JAWSDB_URL",
-      "dialect": "mysql"
-    }
+  development: {
+    "username": "finqxfdjyk73e6ne",
+    "password": "kbfuvbj260fkmnoq",
+    "database": "o25p3h5184fqc1vk",
+    "host": "kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  test: {
+    "username": "finqxfdjyk73e6ne",
+    "password": "kbfuvbj260fkmnoq",
+    "database": "o25p3h5184fqc1vk",
+    "host": "kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  production: {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
-  
+}
