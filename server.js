@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const path = require('path'); 
 const routes = require("./routes"); 
 const db = require('./models');
 
@@ -27,7 +27,7 @@ const syncOptions = { force: false };
 
 if (process.env.NODE_ENV === "production") {
   syncOptions.force = false;
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 }; 
 
 //Starting the server after model sync
