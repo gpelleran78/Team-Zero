@@ -70,18 +70,19 @@ const CartItem = props => {
     return (
       <div className="container">
             <div className="row">
-                <Card>
+                <Card className="orderedCoffeeItem">
                     <Card.Body>
-                        <Card.Text className="cart-item">
-                           <h3>{props.itemName}</h3>
-                            <h4>Size: {size}</h4>
-                           <h4>Flavors: {flavors}</h4>
-                          <h4>Shots: {shots}</h4>
-                          <h4>Milk: {milk}</h4>
-                         <h5>Notes: {props.itemNotes}</h5>
+                        <Card.Text>
+                        <h3 className="orderedCoffeeHeader">{props.itemName}</h3>
+                        <ul clasName="customizeListOrderItems">
+                            <li>Size: {size}</li>
+                            <li>Flavors: {flavors}</li>
+                            <li>Shots: {shots}</li>
+                            <li>Milk: {milk}</li>
+                            <li>Notes: {props.itemNotes}</li>
+                        </ul>
                         </Card.Text>
-
-                        <Button variant="success" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
+                        <Button variant="danger" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
                     </Card.Body>
                 </Card>
             </div>

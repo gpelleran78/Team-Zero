@@ -28,12 +28,9 @@
 
 /* pink cactus image */
 .threePinkCactusIMG {
-    width: 100%;
-}
-
-.threePinkCactusIMG2 {
     width: 100%; 
-    margin-bottom: 5px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
     position: relative;
     top: -10px; 
 }
@@ -61,9 +58,9 @@
 
 /* This is the map */
 .mapHeader{
-    margin-top: 10px; 
-}
-
-.map {
-    margin-top: 10px; 
+    margin-top: 3px; 
+    margin-bottom: 10px; 
+    padding-left: 15px; 
+    font-family: 'Oxygen', sans-serif;
+    color: #3a1707;
 }

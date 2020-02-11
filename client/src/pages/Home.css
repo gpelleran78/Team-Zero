@@ -2,7 +2,7 @@
 .eventCards1 {
     background-color: #f3e9e6; 
     margin-bottom: 1px; 
-    margin-top: 0px;
+    margin-top: 20px;
     border: dotted 1px #ce784d; 
     margin-right: 5px; 
     margin-left: 5px; 
@@ -34,4 +34,13 @@
     background: #e3b098; 
     text-align: center; 
     color: #3a1707; 
+}
+
+.footer {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    border: 0px; 
+    font-family: 'Oxygen', sans-serif;
+    color: #3a1707; 
+    font-size: 10px; 
 }
