@@ -1,7 +1,5 @@
 import React, { useContext } from "react"; 
 import CartContext from "../utils/CartContext"; 
-import { useAuth0 } from "../react-auth0-spa"; 
-import API from "../utils/API"; 
 
 import "../pages/Checkout.css";
 import Card from "react-bootstrap/Card";
@@ -13,10 +11,8 @@ import plants from "../pages/AboutPageIMG/NEWthree-plants.jpg"
 function Checkout () { 
 
     const { setCartConfirm } = useContext(CartContext); 
- 
     setCartConfirm(true); 
 
-    
     return(
       
        <div className="container checkout-page text-center">

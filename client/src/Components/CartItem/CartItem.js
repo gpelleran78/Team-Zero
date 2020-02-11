@@ -1,11 +1,8 @@
 
-import React, { useContext } from 'react';
+import React from 'react';
 import "./CartItem.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import CartContext from "../../utils/CartContext"; 
-import { useAuth0 } from "../../react-auth0-spa";
-
 
 let flavors = "";
 let shots = "";
@@ -33,7 +30,6 @@ const CartItem = props => {
     if (props.itemExtraShots === 0) {
         shots = "no extra shots"
     }
-
 
     if (props.itemVanilla === "true") {
         flavors += " Vanilla";
@@ -70,8 +66,6 @@ const CartItem = props => {
     if (props.itemMilk === "almond") {
         milk = "almond milk"
     }
-
-
 
     return (
       <div className="container">

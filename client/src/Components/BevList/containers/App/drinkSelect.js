@@ -1,8 +1,7 @@
-import React, { Component, useContext } from "react";
+import React, { Component } from "react";
 import DrinkForm from "./drinkForm";
 import Carousel from "./carousel";
 import DrinkList from './drinkList'
-import CartContext from "../../../../utils/CartContext";
 
 class DrinkSelect extends Component {
   state = {
@@ -58,8 +57,6 @@ class DrinkSelect extends Component {
 
    this.props.pushToCart(drink); 
 
-
-    
     //setCartItem
     // console.log("drink LIST HERE", this.drinklist);
     // console.log("drink HERE", this.drinklist[0]);
@@ -89,7 +86,6 @@ class DrinkSelect extends Component {
     return list;
   };
 
-
   deleteDrink = event => {
     console.log("DELETE BUTTON ", event.target.id);
     delete this.drinklist[event.target.id];
@@ -102,7 +98,7 @@ class DrinkSelect extends Component {
   submitOrder = event => {
    event.preventDefault();
    console.log("YOU CLICKED SUBMIT!")
-  }
+  }; 
 
   render() {
     this.bigness++;

@@ -1,6 +1,5 @@
 import React from "react";
 import "./MyOrdersCard.css";
-import Button from "react-bootstrap/Button";
 
 let flavors = "";
 let shots = "";
@@ -24,7 +23,6 @@ const MyOrdersCard = (props) => {
     if (props.itemExtraShots === 0) {
         shots = "no extra shots"
     }
-
 
     if (props.itemVanilla === "true") {
         flavors += " Vanilla";
@@ -61,7 +59,6 @@ const MyOrdersCard = (props) => {
     if (props.itemMilk === "almond") {
         milk = "almond milk"
     }
-
 
     return (
         <div className="myorders-card">
