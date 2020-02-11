@@ -27,6 +27,7 @@ const syncOptions = { force: false };
 
 if (process.env.NODE_ENV === "production") {
   syncOptions.force = false;
+  app.use(express.static("client/build"));
 }; 
 
 //Starting the server after model sync
