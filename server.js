@@ -25,7 +25,7 @@ app.use(routes);
 // app.use(express.static("client/build")); 
 const syncOptions = { force: false }; 
 
-if (process.env.NODE_ENV === "test") {
+if (process.env.NODE_ENV === "production") {
   syncOptions.force = false;
 }; 
 
