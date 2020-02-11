@@ -20,25 +20,24 @@ app.use(cors({
   'preflightContinue': false
 }));
 
-
 app.use(routes); 
 
-// require("./routes/api-routes-orders")(app); 
-// require("./routes/api-routes-events")(app); 
-
 // app.use(express.static("client/build")); 
- 
+const syncOptions = { force: false }; 
+
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = false;
+}; 
+
 //Starting the server after model sync
 db.sequelize
-  .sync({ force: false })
+  .sync(syncOptions)
   .then(function () {
     console.log(__dirname); 
     app.listen(PORT, () => {
       console.log(`🌎 ==> Listening on port ${PORT}!`);
     });
   });
-
-
 
 // Add headers
 // app.use(function (req, res, next) {

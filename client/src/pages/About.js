@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 import Media from "react-bootstrap/Media";
@@ -16,7 +15,6 @@ import miyoung from "../pages/AboutPageIMG/MiyoungIMG.jpg"
 import pinkCactus1 from "../pages/AboutPageIMG/pink-cactus1.jpg"
 
 function About() {
-    let history = useHistory();
 
     return (
 
@@ -120,7 +118,7 @@ function About() {
             </div>
 
             {/* Location information */}
-            <div classNmae="row">
+            <div className="row">
                 <h1 className="mapHeader"> our location</h1>
             </div>
 
