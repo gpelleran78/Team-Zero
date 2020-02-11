@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 const HomeContainer = () => {
 
     return (
-        <div>
+        <div className="text-center">
             {homeData.map(i => (
                 <Card className="eventCards1">
 
@@ -26,6 +26,11 @@ const HomeContainer = () => {
 
                 </Card>
             ))}
+            <div>
+                <Card className="footer">
+                    <Card.Text>copyright @ 2020</Card.Text>
+                </Card>
+            </div>
 
         </div>
     )

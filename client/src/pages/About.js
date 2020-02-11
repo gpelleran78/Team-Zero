@@ -25,7 +25,7 @@ function About() {
 
             <Card className="text-center missionCard">
                 <Card.Body>
-                    <Card.Title className="cardTitle">Our Mission at Road Runner Coffee</Card.Title>
+                    <Card.Title className="cardTitle">our mission at road runner coffee</Card.Title>
                     <Card.Text className="cardText">
                         Road Runner Coffee is committed to bringing our customers the finest quality coffee, serene ambience and welcoming customer experience. At Road Runner Coffee we have the fastest barista’s in the west! Let us make you a drink before you ride off into the sunset.
                 </Card.Text>
@@ -52,7 +52,7 @@ function About() {
                     <Media.Body>
                         <h5>Miyoung Chung</h5>
                         <p>
-                            Cras sit a
+                            Miyoung is an Arizona native that enjoys all things tech, dogs, and food.
                         </p>
                     </Media.Body>
                 </Media>
@@ -87,7 +87,7 @@ function About() {
                     <Media.Body>
                         <h5>Geremy Pelleran</h5>
                         <p>
-                            Cras sit amet
+                        Geremy is a Michigan native who loves the outdoors and grew up hunting and fishing. Geremy moved to Arizona in 2001.
                         </p>
                     </Media.Body>
                 </Media>
@@ -104,8 +104,7 @@ function About() {
                     <Media.Body>
                         <h5>Calli Bonnet</h5>
                         <p>
-                            Cras
-                        </p>
+                        Calli is an Associate Product Manager for an AI software company in Scottsdale, Arizona.                        </p>
                     </Media.Body>
                 </Media>
 
