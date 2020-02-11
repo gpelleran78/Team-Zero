@@ -9,7 +9,7 @@ const apiRoutesOrders = require("./api/api-routes-orders");
 router.use("/api/events", apiRoutesEvents);
 router.use("/api/orders", apiRoutesOrders); 
 
-// If no API routes are hit, send the React app
+//If no API routes are hit, send the React app
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });

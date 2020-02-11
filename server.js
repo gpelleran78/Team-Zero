@@ -21,6 +21,9 @@ app.use(cors({
 }));
 
 app.use(routes); 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // app.get("*", function(req, res) {
   //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
@@ -41,7 +44,6 @@ if (process.env.NODE_ENV === "production") {
 db.sequelize
   .sync(syncOptions)
   .then(function () {
-    console.log(`dirname ${__dirname}`); 
     app.listen(PORT, () => {
       console.log(`🌎 ==> Listening on port ${PORT}!`);
     });
