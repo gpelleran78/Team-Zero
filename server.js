@@ -29,9 +29,9 @@ const syncOptions = { force: false };
 if (process.env.NODE_ENV === "production") {
   syncOptions.force = false;
   app.use(express.static(path.join(__dirname, 'client/build')));
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  });
+  // app.get("*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  // });
 }; 
 
 //Starting the server after model sync
