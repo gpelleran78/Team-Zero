@@ -8,17 +8,18 @@ import axios from "axios";
 export default {
     //get user's orders
     getOrder: function(email) {
-        return axios.get("/api/orders/" + email); 
+       
+        return axios.get("http://localhost:3002/api/orders/" + email); 
     }, 
     saveOrder: function(orderObj) {
-        return axios.post("/api/orders", orderObj); 
+        return axios.post("http://localhost:3002/api/orders", orderObj); 
     }, 
     deleteOrder: function(id) {
-        return axios.delete("/api/orders/" + id);
+        return axios.delete("http://localhost:3002/api/orders/" + id);
     }, 
     // get all events
     getEvents: function() {
-        return axios.get("/api/events"); 
+        return axios.get("http://localhost:3002/api/events"); 
     }
     
 }

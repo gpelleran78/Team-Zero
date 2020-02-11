@@ -2,18 +2,6 @@ const router = require("express").Router();
 // const eventsController = require("../../controllers/eventsController"); 
 const db = require('../../models'); 
 
-// // Matches with "/api/books"
-// router.route("/")
-//   .get(eventsController.findAll)
-//   .post(eventsController.create);
-
-// // Matches with "/api/books/:id"
-// router
-//   .route("/:id")
-//   .get(eventsController.findById)
-//   .put(eventsController.update)
-//   .delete(eventsController.remove);
-
 router.get("/", function(req, res) {
     db.Eventdb
     .findAll({})
@@ -23,10 +11,4 @@ router.get("/", function(req, res) {
     });
 })
 
-router.post("/admin", function(req, res){
-    db.Eventdb
-    .create({
-
-    })
-})
 module.exports = router;
