@@ -20,6 +20,10 @@ app.use(cors({
   'preflightContinue': false
 }));
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}; 
+
 app.use(routes); 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
@@ -34,10 +38,6 @@ const syncOptions = { force: false };
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, 'client/build')));
 // }; 1108
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}; 
 
  syncOptions.force = false;
 //Starting the server after model sync
