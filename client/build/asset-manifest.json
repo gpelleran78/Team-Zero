@@ -1,25 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e9904dd.chunk.css",
-    "main.js": "/static/js/main.c13ad180.chunk.js",
-    "main.js.map": "/static/js/main.c13ad180.chunk.js.map",
+    "main.css": "/static/css/main.64119038.chunk.css",
+    "main.js": "/static/js/main.43b6ebb2.chunk.js",
+    "main.js.map": "/static/js/main.43b6ebb2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7ffb0475.js",
     "runtime-main.js.map": "/static/js/runtime-main.7ffb0475.js.map",
     "static/css/2.47e06e2e.chunk.css": "/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.cb52d61d.chunk.js": "/static/js/2.cb52d61d.chunk.js",
-    "static/js/2.cb52d61d.chunk.js.map": "/static/js/2.cb52d61d.chunk.js.map",
+    "static/js/2.2eee0647.chunk.js": "/static/js/2.2eee0647.chunk.js",
+    "static/js/2.2eee0647.chunk.js.map": "/static/js/2.2eee0647.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6332fb8d501568d48beef4e930e62282.js": "/precache-manifest.6332fb8d501568d48beef4e930e62282.js",
+    "precache-manifest.9cbff9f05dfbfbeed43ab96ba84e15b8.js": "/precache-manifest.9cbff9f05dfbfbeed43ab96ba84e15b8.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.8e9904dd.chunk.css.map": "/static/css/main.8e9904dd.chunk.css.map",
-    "static/js/2.cb52d61d.chunk.js.LICENSE": "/static/js/2.cb52d61d.chunk.js.LICENSE"
+    "static/css/main.64119038.chunk.css.map": "/static/css/main.64119038.chunk.css.map",
+    "static/js/2.2eee0647.chunk.js.LICENSE": "/static/js/2.2eee0647.chunk.js.LICENSE",
+    "static/media/MiyoungIMG.jpg": "/static/media/MiyoungIMG.fab5b5b9.jpg",
+    "static/media/NEWthree-plants.jpg": "/static/media/NEWthree-plants.d97b554f.jpg",
+    "static/media/calli-IMG.jpg": "/static/media/calli-IMG.8169bb0a.jpg",
+    "static/media/cappuccino-coffee-cup.jpg": "/static/media/cappuccino-coffee-cup.296b7745.jpg",
+    "static/media/frep-coffee-image.jpg": "/static/media/frep-coffee-image.f93d0494.jpg",
+    "static/media/geremyIMG.jpg": "/static/media/geremyIMG.c6469489.jpg",
+    "static/media/gooseIMG.jpg": "/static/media/gooseIMG.edf679da.jpg",
+    "static/media/iced-mocha-image-coffee.jpg": "/static/media/iced-mocha-image-coffee.d4f05285.jpg",
+    "static/media/latte-coffee-cup.jpg": "/static/media/latte-coffee-cup.35e7ca4c.jpg",
+    "static/media/pink-cactus1.jpg": "/static/media/pink-cactus1.6418d63c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7ffb0475.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.cb52d61d.chunk.js",
-    "static/css/main.8e9904dd.chunk.css",
-    "static/js/main.c13ad180.chunk.js"
+    "static/js/2.2eee0647.chunk.js",
+    "static/css/main.64119038.chunk.css",
+    "static/js/main.43b6ebb2.chunk.js"
   ]
 }
