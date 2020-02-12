@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import "./CartItem.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import CartContext from '../../utils/CartContext';
 
 let flavors = "";
 let shots = "";
@@ -11,10 +12,6 @@ let milk = "";
 
 const CartItem = props => {
     
-    function editOrder(item) {
-        console.log(`edit this order fired ${item}`)
-    }
-
     if (props.itemExtraShots === "1") {
         shots = "1 extra shot"
     }
@@ -67,6 +64,20 @@ const CartItem = props => {
         milk = "almond milk"
     }
 
+    
+
+    // function deleteThisOrder(arrIndex) {
+    //     console.log(`delete this order ${arrIndex}`); 
+    //     const { cartArr, setCartArr } = useContext(CartContext); 
+     
+    //    var newArr = cartArr.splice(index, arrIndex); 
+    //    setCartArr(newArr); 
+    //    console.log(newArr); 
+
+    // }
+
+    const { deleteThis } = useContext(CartContext); 
+
     return (
       <div className="container">
             <div className="row">
@@ -82,7 +93,7 @@ const CartItem = props => {
                             <li>Notes: {props.itemNotes}</li>
                         </ul>
                         </Card.Text>
-                        <Button variant="danger" onClick={() => editOrder(props.itemIndex)}>x delete this item</Button>
+                        <Button variant="danger" onClick={() => deleteThis(props.itemIndex)}>x delete this item</Button>
                     </Card.Body>
                 </Card>
             </div>
