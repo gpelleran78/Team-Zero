@@ -69,8 +69,7 @@ function About() {
                     <Media.Body>
                         <h5>Steven Bowman</h5>
                         <p>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                            ante
+                            Steven enjoys music, philosphy and fine wine.
                         </p>
                     </Media.Body>
                 </Media>
