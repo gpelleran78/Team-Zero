@@ -21,6 +21,11 @@ app.use(cors({
 }));
 
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}; 
+
+
 app.use(routes); 
 
 app.get('/*', function (req, res) {
@@ -30,10 +35,6 @@ app.get('/*', function (req, res) {
 
 const syncOptions = { force: false }; 
 
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}; 
 
  syncOptions.force = false;
 //Starting the server after model sync
