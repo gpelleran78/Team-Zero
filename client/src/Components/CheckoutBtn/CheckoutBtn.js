@@ -18,7 +18,11 @@ function CheckoutBtn() {
     };
 
     return (
-        <button className="checkout-btn btn" onClick={() => { handleClick() }}>Checkout</button>
+        <div className="container">
+           
+            <button className="checkout-btn btn btn-block" onClick={() => { handleClick() }}>Checkout</button>
+      
+        </div>
     );
 }
 

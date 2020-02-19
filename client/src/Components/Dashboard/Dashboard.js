@@ -3,22 +3,22 @@ import './Dashboard.css';
 import Button from 'react-bootstrap/Button';
 import Media from 'react-bootstrap/Media';
 import { useAuth0 } from "../../react-auth0-spa";
-import { useHistory } from "react-router-dom"; 
+import { useHistory } from "react-router-dom";
 
 
 const Dashboard = () => {
     const { user } = useAuth0();
     console.log(user);
-    let history = useHistory(); 
+    let history = useHistory();
 
     function viewOrders(email) {
         history.push("/myorders");
     }
 
     function updateInfo(email) {
-        history.push("/myupdate"); 
+        history.push("/myupdate");
     }
-    
+
     return (
         <div className="container">
             {/* user image  */}
@@ -74,11 +74,11 @@ const Dashboard = () => {
 
                 {/* These are the updae info and past hostory btns  */}
                 <div className="row justify-content-center">
-                    <Button
+                    {/* <Button
                         onClick={() => updateInfo(user.email)}
                         className="update-historyBTN">
                         update my information
-                </Button>
+                </Button> */}
 
                     <br />
 
@@ -95,5 +95,5 @@ const Dashboard = () => {
 }
 
 
-export default Dashboard; 
+export default Dashboard;
 //history.push("/myorders")
