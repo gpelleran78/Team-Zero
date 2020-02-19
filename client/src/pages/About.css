@@ -6,6 +6,7 @@
 .threeCactusIMG {
     width: 100%; 
     margin-top: 50px; 
+    max-height: 125px; 
 }
 
 .missionCard {
