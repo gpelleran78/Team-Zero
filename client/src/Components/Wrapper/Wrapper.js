@@ -28,14 +28,14 @@ function Wrapper(props) {
 
     useEffect(() => {
         if (cartConfirm === true) {
-            console.log("reset all states trigger"); 
-            setCartCount(0); 
+            console.log("reset all states trigger");
+            setCartCount(0);
         }
     }, [cartConfirm])
 
 
     useEffect(() => {
-        if (cartItem) { 
+        if (cartItem) {
             setCartArr([...cartArr, cartItem]);
         }
 
@@ -72,7 +72,7 @@ function Wrapper(props) {
                 .then(response => console.log(response.data))
                 .catch(err => console.log(err));
         })
-        setCartArr([]); 
+        setCartArr([]);
     };
 
     function loadEvents() {
@@ -82,10 +82,19 @@ function Wrapper(props) {
                 setEventArr(response.data);
             })
             .catch(err => console.log(err));
-    }; 
+    };
+
+    function deleteThis(arrIndex) {
+        // console.log(`delete this ${arrIndex}`);
+        let newArr = cartArr; 
+        
+        setCartArr(newArr.splice(arrIndex));
+        setCartCount(cartCount - 1); 
+        console.log(newArr);
+    }
 
     return (
-        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, handleCartBtn, eventArr, setEventArr, cartConfirm, setCartConfirm }}>
+        <CartContext.Provider value={{ cartArr, setCartArr, cartItem, setCartItem, cartCount, setCartCount, handleCartBtn, eventArr, setEventArr, cartConfirm, setCartConfirm, deleteThis }}>
             <main className="wrapper">{props.children}</main>
         </CartContext.Provider>
     );
